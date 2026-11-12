@@ -1,0 +1,82 @@
+{
+    "source":  "quant-tree-workspace-20261112-1800.json",
+    "date":  "2026-11-12",
+    "pipelines":  13,
+    "nodes":  115,
+    "questions":  1150,
+    "specific_questions":  575,
+    "cross_cutting_questions":  575,
+    "tables_in_columns":  25,
+    "tables_in_observed":  13,
+    "schema_issues":  [
+
+                      ],
+    "pipeline_counts":  [
+                            {
+                                "pipeline":  "母单拆分与TWAP/VWAP/POV/IS执行算法全流程",
+                                "nodes":  11,
+                                "questions":  110
+                            },
+                            {
+                                "pipeline":  "最优执行与市场冲击建模（Almgren-Chriss）",
+                                "nodes":  9,
+                                "questions":  90
+                            },
+                            {
+                                "pipeline":  "TCA交易成本分析",
+                                "nodes":  8,
+                                "questions":  80
+                            },
+                            {
+                                "pipeline":  "A股实盘执行通道对接与上线（QMT/PTrade/恒生PB）",
+                                "nodes":  13,
+                                "questions":  130
+                            },
+                            {
+                                "pipeline":  "低延迟高频执行系统构建（C++/FPGA/内核旁路）",
+                                "nodes":  10,
+                                "questions":  100
+                            },
+                            {
+                                "pipeline":  "实盘交易监控运维与风控应急",
+                                "nodes":  10,
+                                "questions":  100
+                            },
+                            {
+                                "pipeline":  "执行算法仿真与上线前验证",
+                                "nodes":  10,
+                                "questions":  100
+                            },
+                            {
+                                "pipeline":  "盘前准备与开盘集合竞价执行",
+                                "nodes":  6,
+                                "questions":  60
+                            },
+                            {
+                                "pipeline":  "盘口流动性预测与执行择时",
+                                "nodes":  6,
+                                "questions":  60
+                            },
+                            {
+                                "pipeline":  "期货期权与多资产执行通道对接",
+                                "nodes":  7,
+                                "questions":  70
+                            },
+                            {
+                                "pipeline":  "程序化交易合规、异常订单处置与审计报送",
+                                "nodes":  6,
+                                "questions":  60
+                            },
+                            {
+                                "pipeline":  "加密货币与海外执行通道对接（ccxt/资金费套利/跨所调度/盈透与FIX）",
+                                "nodes":  10,
+                                "questions":  100
+                            },
+                            {
+                                "pipeline":  "ETF申赎与大宗交易执行通道",
+                                "nodes":  9,
+                                "questions":  90
+                            }
+                        ],
+    "validation":  "structural coverage only; no database query or teacher inference executed"
+}
