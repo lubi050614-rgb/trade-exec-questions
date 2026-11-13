@@ -1,0 +1,12 @@
+{
+    "result":  "passed",
+    "independent_generation_processes":  2,
+    "file_hashes_matched":  168,
+    "public_data_files":  48,
+    "question_bindings":  1150,
+    "node_cases":  115,
+    "actual_n_symbols":  200,
+    "actual_n_days":  5,
+    "answers_generated":  0,
+    "real_dataset_ready":  false
+}

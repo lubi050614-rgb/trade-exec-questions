@@ -2,7 +2,8 @@
 
 - 先读 `openspec/ROADMAP.md`、相关 `openspec/specs/*/spec.md` 与目标变更单的 proposal/design/tasks。
 - 用 OpenSpec 管理变更：需求在 spec，技术取舍在 design，可执行任务在 tasks；只有证据成立才勾选任务。
-- 后续优先执行 `build-execution-fixture-mvp`；依赖见 ROADMAP。不要把生成器规划误报为生成器实现。
+- 当前只交付题目＋对应输入，不生成答案；教师调用、蒸馏、知识卡和学生评测均延期。下一步见ROADMAP与未勾选任务。
+- 一键生成入口为`scripts/build-question-inputs.ps1`，独立校验数据和逐题绑定；synthetic基础输入、节点精确故障、真实数据三种状态不可混用。
 - `config/data-gaps.json` 是数据缺口单一来源；`config/node-contracts.txt` 是115个节点的缺口、数据源、不变量、故障和独立验收映射。
 - 修改源后运行 `build-deliverables.ps1` 和 `scripts/validate-question-bank.ps1`；不只手改CSV或JSONL。保留原 question_id/node_id。
 - 用 `scripts/openspec.ps1` 调用项目内CLI；CLI本体不提交。未安装时运行 `scripts/setup-openspec.ps1`。

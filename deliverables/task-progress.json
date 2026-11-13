@@ -1,39 +1,71 @@
 [
     {
-        "change":  "add-special-asset-fixtures",
-        "archived":  false,
-        "completed_tasks":  0,
+        "change":  "2026-11-13-add-special-asset-fixtures",
+        "archived":  true,
+        "scope_status":  "active",
+        "completed_tasks":  7,
         "total_tasks":  7,
-        "implementation_status":  "planned",
-        "task_file":  "openspec/changes/add-special-asset-fixtures/tasks.md"
+        "implementation_status":  "complete",
+        "task_file":  "openspec/changes/archive/2026-11-13-add-special-asset-fixtures/tasks.md"
+    },
+    {
+        "change":  "2026-11-13-build-execution-fixture-mvp",
+        "archived":  true,
+        "scope_status":  "active",
+        "completed_tasks":  12,
+        "total_tasks":  12,
+        "implementation_status":  "complete",
+        "task_file":  "openspec/changes/archive/2026-11-13-build-execution-fixture-mvp/tasks.md"
+    },
+    {
+        "change":  "2026-11-13-deliver-question-input-packs",
+        "archived":  true,
+        "scope_status":  "active",
+        "completed_tasks":  9,
+        "total_tasks":  9,
+        "implementation_status":  "complete",
+        "task_file":  "openspec/changes/archive/2026-11-13-deliver-question-input-packs/tasks.md"
+    },
+    {
+        "change":  "2026-11-13-focus-input-data-scope",
+        "archived":  true,
+        "scope_status":  "active",
+        "completed_tasks":  3,
+        "total_tasks":  3,
+        "implementation_status":  "complete",
+        "task_file":  "openspec/changes/archive/2026-11-13-focus-input-data-scope/tasks.md"
     },
     {
         "change":  "2026-11-13-govern-data-gaps-and-question-bank",
         "archived":  true,
+        "scope_status":  "active",
         "completed_tasks":  9,
         "total_tasks":  9,
         "implementation_status":  "complete",
         "task_file":  "openspec/changes/archive/2026-11-13-govern-data-gaps-and-question-bank/tasks.md"
     },
     {
-        "change":  "build-execution-fixture-mvp",
-        "archived":  false,
-        "completed_tasks":  0,
-        "total_tasks":  12,
-        "implementation_status":  "planned",
-        "task_file":  "openspec/changes/build-execution-fixture-mvp/tasks.md"
-    },
-    {
         "change":  "connect-market-replay-and-calibration",
         "archived":  false,
+        "scope_status":  "active",
         "completed_tasks":  0,
         "total_tasks":  9,
         "implementation_status":  "planned",
         "task_file":  "openspec/changes/connect-market-replay-and-calibration/tasks.md"
     },
     {
+        "change":  "refine-node-specific-inputs",
+        "archived":  false,
+        "scope_status":  "active",
+        "completed_tasks":  0,
+        "total_tasks":  13,
+        "implementation_status":  "planned",
+        "task_file":  "openspec/changes/refine-node-specific-inputs/tasks.md"
+    },
+    {
         "change":  "run-teacher-distillation",
         "archived":  false,
+        "scope_status":  "deferred",
         "completed_tasks":  0,
         "total_tasks":  8,
         "implementation_status":  "planned",

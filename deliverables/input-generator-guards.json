@@ -1,0 +1,14 @@
+{
+    "result":  "passed",
+    "negative_configurations_rejected":  7,
+    "cases":  [
+                  "answer_export",
+                  "real_market_claim",
+                  "ambiguous_units",
+                  "unknown_field",
+                  "overwrite_without_generator_marker",
+                  "missing_scenario_universe",
+                  "order_id_namespace_overflow"
+              ],
+    "answers_generated":  0
+}

@@ -62,8 +62,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -126,8 +129,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -169,8 +175,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -215,8 +224,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -270,8 +282,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -335,8 +350,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -406,8 +424,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -453,8 +474,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -508,8 +532,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -572,8 +599,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -606,8 +636,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -699,8 +732,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -770,8 +806,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -824,8 +863,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -881,8 +923,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -924,8 +969,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -991,8 +1039,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1082,8 +1133,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1116,8 +1170,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1175,8 +1232,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1234,8 +1294,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1292,8 +1355,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1356,8 +1422,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1418,8 +1487,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1469,8 +1541,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1503,8 +1578,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1539,8 +1617,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1594,8 +1675,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1636,8 +1720,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1675,8 +1762,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1712,8 +1802,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1751,8 +1844,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1790,8 +1886,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1860,8 +1959,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1923,8 +2025,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1985,8 +2090,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2045,8 +2153,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2084,8 +2195,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2126,8 +2240,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2195,8 +2312,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2234,8 +2354,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2265,8 +2388,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2339,8 +2465,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2434,8 +2563,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2471,8 +2603,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2505,8 +2640,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2557,8 +2695,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2594,8 +2735,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2625,8 +2769,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2659,8 +2806,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2690,8 +2840,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2754,8 +2907,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2818,8 +2974,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2878,8 +3037,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2923,8 +3085,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2971,8 +3136,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3010,8 +3178,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3072,8 +3243,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3104,8 +3278,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3154,8 +3331,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3193,8 +3373,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3273,8 +3456,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3361,8 +3547,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3446,8 +3635,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3523,8 +3715,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3585,8 +3780,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3647,8 +3845,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3708,8 +3909,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3770,8 +3974,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3807,8 +4014,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3849,8 +4059,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3915,8 +4128,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3957,8 +4173,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4013,8 +4232,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4057,8 +4279,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4107,8 +4332,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4159,8 +4387,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4249,8 +4480,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4301,8 +4535,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4384,8 +4621,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4433,8 +4673,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4488,8 +4731,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4558,8 +4804,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4600,8 +4849,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4641,8 +4893,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4682,8 +4937,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4723,8 +4981,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4780,8 +5041,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4816,8 +5080,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4850,8 +5117,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4887,8 +5157,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4924,8 +5197,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4959,8 +5235,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4996,8 +5275,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5034,8 +5316,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5071,8 +5356,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5107,8 +5395,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5146,8 +5437,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5184,8 +5478,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5225,8 +5522,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5261,8 +5561,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5298,8 +5601,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5339,8 +5645,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5374,8 +5683,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5410,8 +5722,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5446,8 +5761,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5496,8 +5814,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5553,8 +5874,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5605,8 +5929,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5641,8 +5968,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5677,8 +6007,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5714,8 +6047,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5757,8 +6093,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5801,8 +6140,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5864,8 +6206,11 @@
                       ],
         "readiness":  {
                           "design_ready":  true,
+                          "synthetic_input_ready":  true,
                           "dataset_ready":  false,
-                          "generator_implemented":  false,
+                          "generator_implemented":  true,
+                          "generator_scope":  "shared_synthetic_inputs_only",
+                          "exact_node_fault_implemented":  false,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",

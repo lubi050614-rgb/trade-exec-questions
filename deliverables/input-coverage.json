@@ -1,0 +1,16 @@
+{
+    "questions":  1150,
+    "nodes":  115,
+    "synthetic_baseline_ready":  1150,
+    "exact_node_fault_ready":  0,
+    "actual_n_symbols":  200,
+    "actual_n_days":  5,
+    "public_data_files":  48,
+    "input_validation_result":  "passed",
+    "answers_generated":  0,
+    "real_dataset_ready":  false,
+    "real_calibration_ready":  false,
+    "manifest_sha256":  "e2435ae15bdb574e2adaead4a84964552e9a48f0ad51a8025e5a93ea43eb7d8a",
+    "scope":  "questions_and_inputs_only",
+    "limitations":  "Every question has concrete shared baseline and a small-case input; exact reproduction of every node-specific fault and real-source validation remain separate tasks."
+}

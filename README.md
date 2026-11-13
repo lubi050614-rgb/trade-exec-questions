@@ -2,14 +2,16 @@
 
 面向量化交易执行知识蒸馏的题库与实验设计：13 个管线、115 个技术节点，每节点 10 题，共 1,150 题。
 
-当前v2已明确逐节点数据契约与任务依赖，**业务数据生成器、真实数据接入和教师答案仍待实施**。下一步是[业务夹具MVP](openspec/changes/build-execution-fixture-mvp/tasks.md)。
+当前v3只交付**题目＋对应输入数据，不生成答案**。已实现共享合成输入生成器、200个SYN标的5日基础数据和1150题输入索引。真实行情、真实柜台与硬件证据仍待提供；每个节点的精确故障覆盖与基础输入可用分开记录。
 
 ## 主要文件
 
 - [设计建议与数据缺口](deliverables/设计建议与数据缺口.md)：问题设计、200 股 × 5 日方案、12 类缺失数据、模拟方法与开源参考。
 - [完整题库](deliverables/交易执行_1150题.md)：可阅读版本。
 - [CSV 题库](deliverables/交易执行_1150题.csv)：用于筛选与标注。
-- [教师输入 JSONL](deliverables/交易执行_教师输入.jsonl)：每行一个问题，包含提示词、相关字段和缺失数据说明；答案待生成。
+- [题目与数据输入 JSONL](deliverables/题目与数据输入.jsonl)和[输入索引 CSV](deliverables/题目输入索引.csv)：每题绑定实际存在的文件、小案例、可见时间和支持范围，不包含答案。
+- [数据包使用说明](deliverables/输入数据使用说明.md)及[完整合成输入 ZIP](deliverables/执行输入数据_200标的5日.zip)。
+- [历史兼容 JSONL](deliverables/交易执行_教师输入.jsonl)：旧格式问题与作答要求，未生成答案；当前入口为上方题目与数据输入索引。
 - [数据覆盖审计 SQL](deliverables/数据覆盖审计.sql)：尚未在数据库执行的只读查询模板。
 - [覆盖统计](deliverables/coverage.json)及[验证结果](deliverables/验证结果.txt)。
 - [数据缺口登记](deliverables/数据缺口登记表.md)及[CSV](deliverables/数据缺口登记表.csv)：12类缺口的字段、真实/合成方案、角色、验收和任务。
@@ -28,9 +30,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-question-ba
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-progress.ps1
 ```
 
+生成题目及配套输入的一键入口：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-question-inputs.ps1 -Overwrite
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/read-question-input.ps1 -QuestionId P01-S01-Q01 -MetadataOnly
+```
+
+默认输出`data/generated/execution-inputs-v1`，目录不入Git；可下载上方ZIP解压到该目录。全部为synthetic/test_only，分钟数据24万条，原始逐笔和盘口为采样重置块；不宣称完整真实L3。
+
 ## 使用边界
 
-本项目尚未连接 ClickHouse、生成教师答案或执行实盘操作。200 股 × 5 日是建议的工程演练配置，实际数据覆盖待核验。工程仿真通过不等于真实成交概率、冲击和收益效果已经得到验证。
+本项目未连接真实ClickHouse或执行实盘操作，当前不生产答案。200个合成标的×5个测试日期已实际生成并验证；真实市场覆盖仍待核验。输入质量通过不等于真实成交概率、冲击、生产执行或收益已验证。
 
 Q01—Q05 为逐节点具体技术题；Q06—Q10 为绑定节点上下文的数据、验收、故障、反事实与证据边界题。
 
@@ -41,8 +52,8 @@ Q01—Q05 为逐节点具体技术题；Q06—Q10 为绑定节点上下文的数
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-openspec.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 list
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 instructions apply --change build-execution-fixture-mvp --json
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 instructions apply --change refine-node-specific-inputs --json
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 validate --all --strict
 ```
 
-`status`中的planning/artifact完成不代表实现任务完成；实际勾选见tasks.md和任务进度。后续顺序为业务夹具→真实重放/校准→专用资产→教师试跑及蒸馏，独立任务可按路线图前置条件推进。
+`status`中的planning/artifact完成不代表实现任务完成；实际勾选见tasks.md和任务进度。当前数据实施顺序为业务夹具→真实重放/质量审计→专用资产输入；教师试跑及蒸馏为deferred，不计当前待办。

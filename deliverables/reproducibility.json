@@ -6,62 +6,62 @@
     "files":  [
                   {
                       "file":  "coverage.json",
-                      "sha256":  "1084249E52F6AC23647F462ECE5088E9B7388F6F3EA21706DF68381CA37826CA",
+                      "sha256":  "395E3106636A2A4E6ABC9D3BDEDA9184EE9007C2165C0323C761F44BD6F3B21B",
                       "matched":  true
                   },
                   {
                       "file":  "validation.json",
-                      "sha256":  "F84B86DD8DB60B2C468EB55EFAA5FBBC0EC826552CA46C3D5072860B21B97EB9",
+                      "sha256":  "9B2056A7856E9220873CE09FB9491FE190FCA8C5AC9860618E81D78DCF9FA8B2",
                       "matched":  true
                   },
                   {
                       "file":  "交易执行_1150题.csv",
-                      "sha256":  "323FA3064654A4E191D443176D5904FDA538583A913BC6E870057883401F9F34",
+                      "sha256":  "344DCE5D164B8DB1DA09505CC385874E4CB29DA4BF754C8B8A899FF17CA332BC",
                       "matched":  true
                   },
                   {
                       "file":  "交易执行_1150题.md",
-                      "sha256":  "12B7ACD94840C74C5A3F1B83872233290A65A8C302CBC73828CF7542CCA2B596",
+                      "sha256":  "42C6E681674DF3561DC0E85B127DC5A70AE98E131D27B479493E70523CFD8361",
                       "matched":  true
                   },
                   {
                       "file":  "交易执行_教师输入.jsonl",
-                      "sha256":  "DA44E20204E34F06E858EBEA5C65E13F50073C5847C545E8756B5E2B3A051724",
+                      "sha256":  "45F07974CD65B6A9B8326E08438461C5A7878430CC20FCA31358D4915E65851A",
                       "matched":  true
                   },
                   {
                       "file":  "教师作答契约.txt",
-                      "sha256":  "D97E90F90A947FEBC8067B2EF9057FC074101B7DF70B848A810C70AB6557D97B",
+                      "sha256":  "177BBB0B2F160928E433CC56242E98877495ECC1AB8D7DD7E93976ECC1438E64",
                       "matched":  true
                   },
                   {
                       "file":  "节点数据契约.csv",
-                      "sha256":  "BA0520E6947EE69DAB24F45A240E50446EE879C3803CBE0145D9249F85F30573",
+                      "sha256":  "80245E69FC2A0CE5EF646480C8CF39431B692F4582E41093130966C8405834C8",
                       "matched":  true
                   },
                   {
                       "file":  "节点数据契约.json",
-                      "sha256":  "5C67711CA239EA4A7A6D388D2CED6E68881ECE4EBD9FF642898D7C86AAA7D76A",
+                      "sha256":  "814953BAB87577FBDC594D9C0525864C9872109683829D7CD8EE25A5E2196B9B",
                       "matched":  true
                   },
                   {
                       "file":  "数据缺口登记表.csv",
-                      "sha256":  "736B00FF9AFB99BBB97B227D9CD6FE0FD3C9A31302E4E67784FE528B986D695F",
+                      "sha256":  "AB746A5100DB08C13B5CECE120CDCA5EB2C907EBE654A9B5447928F1063633D3",
                       "matched":  true
                   },
                   {
                       "file":  "数据缺口登记表.md",
-                      "sha256":  "88DB133DBDD4BC2F77CA2C6D47AC7296C571783415BBC7C183B01D111E915C5F",
+                      "sha256":  "45053A4258AC06B2AA842AE2DF1EEBDE39CF72A7F1FF20A67E28772749F42AD6",
                       "matched":  true
                   },
                   {
                       "file":  "题库就绪度.md",
-                      "sha256":  "197C7FE46D70F97A02ECEB4871EB6B9BBB456BD0DD638B1A511288483D4AD6D1",
+                      "sha256":  "A4757B1C57A21BD8F2F1A672674730C4E324ED2C93C26D8F2FA756B6483A0F8D",
                       "matched":  true
                   },
                   {
                       "file":  "验证结果.txt",
-                      "sha256":  "06BFDC75E320617BF99AC51DE445573B19C5EDE3D6FBAD4A8A479C6F594C02E7",
+                      "sha256":  "2DB90BD2DA07C9F6CC47F4D19C92700FB622823DC8C326B6EA6B5A160BEAC192",
                       "matched":  true
                   },
                   {

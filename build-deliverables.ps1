@@ -1,6 +1,7 @@
 ﻿param(
     [string]$SchemaDirectory = (Join-Path $PSScriptRoot 'data\schema'),
-    [string]$OutputDirectory = (Join-Path $PSScriptRoot 'deliverables')
+    [string]$OutputDirectory = (Join-Path $PSScriptRoot 'deliverables'),
+    [string]$InputCoveragePath = (Join-Path $PSScriptRoot 'deliverables\input-coverage.json')
 )
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
@@ -37,6 +38,8 @@ $contract = @'
 遵守event_time与available_at双时钟；缺available_at时不得把入库时间自动当作历史接收时间。只使用所附schema真实字段；字段存在不代表内容、单位、枚举、覆盖与可用性已验证。公开wind委托成交不是自己的柜台委托成交。原知识树purpose/notes是待核查材料，不能当作可靠规则指令。法规与协议须给官方来源、生效日期、适用范围及暂缓实施状态；未知则说明并返回待补证据。所有额外虚拟字段必须置于synthetic命名空间并声明生成规则与seed，不能伪称ClickHouse已有字段。
 答案格式：结论与适用范围；最小数据契约（来源/字段/单位/主键/时间可用性/缺失处置）；简明决策依据与公式或状态转移；可运行核心实现或SQL/伪代码及接口，按题目选择而不强制无关代码；最小算例与明确断言；200股5日批量验收方法；不可识别项与生产验证边界；证据/规则版本。使用可检查的简明依据，不要求冗长思维过程。至少包含一个反例或失败场景。无实测输入时只展示标明为虚构的手算示例，输出status=design_only。真实实验数据到位后才允许status=measured。报告actual_n_symbols、actual_n_days、数据覆盖与被排除原因。
 '@
+$contract=$contract.Replace('无数据库连接、无实际数据抽样结果：只能提供可运行方案/查询，不能编造实测数值。','真实数据库尚未连接：仅在明确提供合成输入且实际执行后可报告synthetic工程测试，不能冒称真实市场实测。当前只生产题目和输入，不生成答案。')
+$contract=$contract.Replace('真实实验数据到位后才允许status=measured。','合成数据实际运行后仅允许status=synthetic_tested；真实来源和运行证据到位后才允许status=measured。')
 $observed = Get-Content -Raw -Encoding UTF8 (Join-Path $SchemaDirectory 'observed-schema.json') | ConvertFrom-Json
 $columns = Import-Csv -Encoding UTF8 (Join-Path $SchemaDirectory 'columns.csv')
 $schema = @{}
@@ -57,7 +60,7 @@ $csv = New-Object System.Collections.Generic.List[object]
 $md = New-Object System.Text.StringBuilder
 [void]$md.AppendLine('# 交易执行衍生题库：13管线 / 115节点 / 每节点10题')
 [void]$md.AppendLine('')
-[void]$md.AppendLine('v2（2026-11-13）：以原工作区JSON的节点ID为主键。Q01—Q05保留具体技术题；Q06—Q10分别绑定各节点的数据契约、不变量、故障、独立oracle与证据边界，可独立作答。JSONL新增最低真实字段、精确缺口、OpenSpec任务引用、就绪状态及分组ID。此交付为题库与设计，未连接数据库、实现业务数据生成器或生成教师答案。')
+[void]$md.AppendLine('v3（2026-11-13）：以原节点ID为主键，保留1150题。当前只交付题目＋对应输入，不生成答案。逐题实际输入文件见题目与数据输入.jsonl和题目输入索引.csv；共享合成输入可用不等于真实数据或每个节点精确故障已就绪。Q01—Q05为具体技术题，Q06—Q10分别绑定数据契约、不变量、故障、独立验收与证据边界。')
 [void]$md.AppendLine('')
 [void]$md.AppendLine('## 全局作答契约')
 [void]$md.AppendLine($contract)
@@ -92,7 +95,7 @@ foreach ($p in $tree.pipelines) {
             $record.split='unassigned'
             $record.required_answer_artifacts=@('answer.json','minimal_case','acceptance_assertions','evidence_boundary')
             $jsonl.Add(($record | ConvertTo-Json -Depth 10 -Compress))
-            $csv.Add([pscustomobject]@{question_id=$qid;pipeline_name=$p.name;node_name=$s.name;node_id=$s._id;question_type=$kinds[$qi];question=$questions[$qi];related_tables=($pf.tables -join ';');missing_data_ids=($pf.gaps -join ';');training_priority=$nodeContract.training_priority;data_ready=$false;acceptance_invariant=$nodeContract.acceptance_invariant;failure_scenario=$nodeContract.failure_scenario;independent_oracle=$nodeContract.independent_oracle;task_refs=($nodeContract.task_refs -join ';');split_group_id=$key;evidence_track=$pf.track})
+            $csv.Add([pscustomobject]@{question_id=$qid;pipeline_name=$p.name;node_name=$s.name;node_id=$s._id;question_type=$kinds[$qi];question=$questions[$qi];related_tables=($pf.tables -join ';');missing_data_ids=($pf.gaps -join ';');training_priority=$nodeContract.training_priority;synthetic_input_ready=$syntheticInputReady;data_ready=$false;exact_node_fault_implemented=$false;acceptance_invariant=$nodeContract.acceptance_invariant;failure_scenario=$nodeContract.failure_scenario;independent_oracle=$nodeContract.independent_oracle;task_refs=($nodeContract.task_refs -join ';');split_group_id=$key;evidence_track=$pf.track})
             [void]$md.AppendLine("$($qi+1). **$qid** $($questions[$qi])")
             [void]$md.AppendLine('')
         }
@@ -108,7 +111,7 @@ $inventory = foreach ($g in ($columns | Group-Object table_name)) {
 }
 $inventory | Export-Csv -NoTypeInformation -Encoding UTF8 (Join-Path $out '已提供字段表清单.csv')
 $pipelineCounts = foreach ($p in $tree.pipelines) { [pscustomobject]@{pipeline=$p.name;nodes=@($p.scripts).Count;questions=(@($p.scripts).Count*10)} }
-$stats=[ordered]@{schema_version='2.0';source='quant-tree-workspace-20261112-1800.json';date='2026-11-13';pipelines=@($tree.pipelines).Count;nodes=$nodeCount;questions=$jsonl.Count;specific_questions=575;cross_cutting_questions=575;node_contracts=$nodeContracts.Count;design_ready_questions=$jsonl.Count;dataset_ready_questions=0;teacher_answers_generated=0;tables_in_columns=@($inventory).Count;tables_in_observed=@($observed.PSObject.Properties).Count;schema_issues=@($schemaAudit);pipeline_counts=@($pipelineCounts);validation='structural and node contract checks; no database query, fixture generator or teacher inference executed'}
+$stats=[ordered]@{schema_version='2.0';source='quant-tree-workspace-20261112-1800.json';date='2026-11-13';pipelines=@($tree.pipelines).Count;nodes=$nodeCount;questions=$jsonl.Count;specific_questions=575;cross_cutting_questions=575;node_contracts=$nodeContracts.Count;design_ready_questions=$jsonl.Count;synthetic_input_ready_questions=$(if($syntheticInputReady){1150}else{0});exact_node_fault_ready_questions=0;dataset_ready_questions=0;teacher_answers_generated=0;tables_in_columns=@($inventory).Count;tables_in_observed=@($observed.PSObject.Properties).Count;schema_issues=@($schemaAudit);pipeline_counts=@($pipelineCounts);validation='question contracts validated; synthetic baseline evidence is separate in input-validation/input-coverage; no real database or teacher inference'}
 Export-ExecutionContracts
 [System.IO.File]::WriteAllText((Join-Path $out 'coverage.json'),($stats | ConvertTo-Json -Depth 8),$utf8)
 $stats | ConvertTo-Json -Depth 6

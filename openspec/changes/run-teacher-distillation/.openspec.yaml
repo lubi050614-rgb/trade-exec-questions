@@ -1,2 +1,4 @@
 schema: spec-driven
 created: 2026-11-13
+x-status: deferred
+x-reason: 用户明确当前不考虑教师答案；教师模型调用、蒸馏和学生评测不纳入当前阶段。

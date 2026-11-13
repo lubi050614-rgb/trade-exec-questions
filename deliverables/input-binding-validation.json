@@ -1,0 +1,14 @@
+{
+    "result":  "passed",
+    "questions":  1150,
+    "nodes":  115,
+    "input_paths":  "public_and_resolved",
+    "case_hashes":  "matched",
+    "no_answer_fields":  true,
+    "inference_parameter_leakage":  "blocked_by_file_selection",
+    "future_feature_gate":  "passed",
+    "future_daily_gate":  "passed",
+    "negative_bindings_rejected":  3,
+    "real_dataset_ready":  false,
+    "exact_node_fault_ready":  0
+}

@@ -9,7 +9,8 @@
     "csv_jsonl":  "matched",
     "negative_cases_rejected":  4,
     "database_connected":  false,
-    "generator_implemented":  false,
+    "shared_input_generator_implemented":  true,
+    "exact_node_fault_implemented":  false,
     "teacher_answers_generated":  0,
     "result":  "passed"
 }

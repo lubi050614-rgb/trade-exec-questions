@@ -2,7 +2,7 @@
 $root=Split-Path $PSScriptRoot -Parent
 $staging=Join-Path $root ('reports\local\package-v2-'+[guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Force -Path $staging | Out-Null
-foreach($name in @('deliverables','openspec','config','data\schema','scripts')) {
+foreach($name in @('deliverables','openspec','config','data\schema','scripts','src')) {
     $target=Join-Path $staging (Split-Path $name -Parent)
     if(-not(Test-Path -LiteralPath $target)){New-Item -ItemType Directory -Force -Path $target | Out-Null}
     Copy-Item -LiteralPath (Join-Path $root $name) -Destination $target -Recurse -Force
