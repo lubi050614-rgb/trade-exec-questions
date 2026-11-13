@@ -5,7 +5,7 @@
       "type": "change",
       "valid": true,
       "issues": [],
-      "durationMs": 9
+      "durationMs": 10
     },
     {
       "id": "2026-11-13-build-execution-fixture-mvp",
@@ -19,21 +19,28 @@
       "type": "change",
       "valid": true,
       "issues": [],
-      "durationMs": 0
+      "durationMs": 2
+    },
+    {
+      "id": "2026-11-13-fix-question-input-review",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 3
     },
     {
       "id": "2026-11-13-focus-input-data-scope",
       "type": "change",
       "valid": true,
       "issues": [],
-      "durationMs": 4
+      "durationMs": 1
     },
     {
       "id": "2026-11-13-govern-data-gaps-and-question-bank",
       "type": "change",
       "valid": true,
       "issues": [],
-      "durationMs": 1
+      "durationMs": 0
     },
     {
       "id": "2026-11-13-refine-node-specific-inputs",
@@ -45,14 +52,14 @@
   ],
   "summary": {
     "totals": {
-      "items": 6,
-      "passed": 6,
+      "items": 7,
+      "passed": 7,
       "failed": 0
     },
     "byType": {
       "change": {
-        "items": 6,
-        "passed": 6,
+        "items": 7,
+        "passed": 7,
         "failed": 0
       }
     }

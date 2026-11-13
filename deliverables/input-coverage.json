@@ -2,7 +2,10 @@
     "questions":  1150,
     "nodes":  115,
     "synthetic_baseline_ready":  1150,
-    "exact_node_fault_ready":  1150,
+    "exact_node_fault_ready":  20,
+    "exact_node_fault_ready_nodes":  2,
+    "semantic_pending_nodes":  113,
+    "validation_schema_version":  3,
     "precise_question_cases":  1150,
     "precise_node_variants":  575,
     "precise_validation_result":  "passed",
@@ -15,7 +18,7 @@
     "real_calibration_ready":  false,
     "manifest_sha256":  "e2435ae15bdb574e2adaead4a84964552e9a48f0ad51a8025e5a93ea43eb7d8a",
     "scope":  "questions_and_inputs_only",
-    "case_manifest_sha256":  "6d39c9e3029d5e4d15dc381b8a8e04792922a0a7484e91bd1782053f0b92c597",
-    "precise_validation_sha256":  "442ad1b57557a9c1dfc5525db86000122ea09d032753e21a1809cb28b149f17e",
-    "limitations":  "Explicit per-question synthetic inputs and node fault probes validated; real-source replay, official semantics and hardware evidence remain unavailable."
+    "case_manifest_sha256":  "5e5f40ee573351e801ea083103d62f9c0712c9e6c2024999d80242ebc7a035ad",
+    "precise_validation_sha256":  "45f32d1a373961fa642f8fc9c6241419c40bc43942e711d6925b5225ca554edc",
+    "limitations":  "All question projections and declared relations checked; raw-event semantic oracles verified only for nodes explicitly marked ready. Other node semantics remain pending review; real evidence unavailable."
 }

@@ -1,18 +1,25 @@
 {
   "items": [
     {
-      "id": "connect-market-replay-and-calibration",
+      "id": "audit-question-input-semantics",
       "type": "change",
       "valid": true,
       "issues": [],
       "durationMs": 33
     },
     {
+      "id": "connect-market-replay-and-calibration",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 35
+    },
+    {
       "id": "data-gap-registry",
       "type": "spec",
       "valid": true,
       "issues": [],
-      "durationMs": 5
+      "durationMs": 4
     },
     {
       "id": "execution-fixtures",
@@ -26,10 +33,17 @@
       "type": "spec",
       "valid": true,
       "issues": [],
-      "durationMs": 0
+      "durationMs": 1
     },
     {
       "id": "question-bank",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    },
+    {
+      "id": "question-input-semantics",
       "type": "spec",
       "valid": true,
       "issues": [],
@@ -40,21 +54,21 @@
       "type": "spec",
       "valid": true,
       "issues": [],
-      "durationMs": 1
+      "durationMs": 0
     },
     {
       "id": "run-teacher-distillation",
       "type": "change",
       "valid": true,
       "issues": [],
-      "durationMs": 34
+      "durationMs": 33
     },
     {
       "id": "special-asset-fixtures",
       "type": "spec",
       "valid": true,
       "issues": [],
-      "durationMs": 0
+      "durationMs": 1
     },
     {
       "id": "task-progress",
@@ -66,19 +80,19 @@
   ],
   "summary": {
     "totals": {
-      "items": 9,
-      "passed": 9,
+      "items": 11,
+      "passed": 11,
       "failed": 0
     },
     "byType": {
       "change": {
-        "items": 2,
-        "passed": 2,
+        "items": 3,
+        "passed": 3,
         "failed": 0
       },
       "spec": {
-        "items": 7,
-        "passed": 7,
+        "items": 8,
+        "passed": 8,
         "failed": 0
       }
     }

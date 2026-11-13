@@ -10,7 +10,7 @@
     "node_contracts":  115,
     "design_ready_questions":  1150,
     "synthetic_input_ready_questions":  1150,
-    "exact_node_fault_ready_questions":  1150,
+    "exact_node_fault_ready_questions":  20,
     "dataset_ready_questions":  0,
     "teacher_answers_generated":  0,
     "tables_in_columns":  25,

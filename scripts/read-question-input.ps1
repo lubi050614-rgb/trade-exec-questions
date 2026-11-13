@@ -61,7 +61,7 @@ foreach($ref in $binding.input_files){
     try{
         foreach($line in [System.IO.File]::ReadLines($path,[System.Text.Encoding]::UTF8)){
             $scanned++;$row=$line | ConvertFrom-Json
-            if($row.variant -and $binding.filters.special_variants -and $row.variant -notin $binding.filters.special_variants){continue}
+            if($row.variant -and $row.variant -notin $binding.filters.special_variants){continue}
             if($Symbols){
                 $sym=if($row.security_code){$row.security_code}elseif($row.symbol){$row.symbol}elseif($row.component_code){$row.component_code}else{$null}
                 if($sym -and $sym -notin $Symbols){continue}

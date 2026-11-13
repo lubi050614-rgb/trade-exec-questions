@@ -46,8 +46,10 @@ function Test-QuestionRecord($r) {
         Assert-Check ($evidence.input_validation_result -eq 'passed' -and $r.readiness.generator_scope -in @('shared_synthetic_inputs_only','shared_and_question_specific_synthetic_inputs')) 'Unverified generator scope'
     }
     if($r.readiness.exact_node_fault_implemented){
-        Assert-Check ($evidence.exact_node_fault_ready -eq 1150 -and $evidence.precise_validation_result -eq 'passed') 'Missing precise input evidence'
+        Assert-Check ($evidence.validation_schema_version -eq 3 -and $evidence.exact_node_fault_ready -gt 0 -and $evidence.precise_validation_result -eq 'passed') 'Missing precise input evidence'
         $precisePath=Join-Path (Split-Path $InputCoveragePath -Parent) 'precise-input-validation.json'
+        $precise=Get-Content -Raw -Encoding UTF8 $precisePath | ConvertFrom-Json
+        Assert-Check (@($precise.nodes_detail | Where-Object {$_.node_key -eq $r.split_group_id -and $_.exact_node_fault_implemented}).Count -eq 1) 'Node lacks raw-event semantic evidence'
         Assert-Check ((Get-FileHash -LiteralPath $precisePath -Algorithm SHA256).Hash.ToLowerInvariant() -eq $evidence.precise_validation_sha256) 'Stale precise validation report'
     }
     Assert-Check ($r.universe_target -eq 200 -and $r.evaluation_trading_days -eq 5) 'Experiment target mismatch'
@@ -111,7 +113,7 @@ if($SelfTest) {
         $negativeCount++
     }
 }
-$result=[ordered]@{schema_version='2.0';validated_at='2026-11-13';questions=$records.Count;nodes=$contracts.Count;gaps=$gapIndex.Count;task_references='resolved';real_fields='schema_checked';csv_jsonl='matched';negative_cases_rejected=$negativeCount;database_connected=$false;shared_input_generator_implemented=($records[0].readiness.generator_implemented -eq $true);exact_node_fault_implemented=($records[0].readiness.exact_node_fault_implemented -eq $true);teacher_answers_generated=0;result='passed'}
+$result=[ordered]@{schema_version='2.0';validated_at='2026-11-13';questions=$records.Count;nodes=$contracts.Count;gaps=$gapIndex.Count;task_references='resolved';real_fields='schema_checked';csv_jsonl='matched';negative_cases_rejected=$negativeCount;database_connected=$false;shared_input_generator_implemented=($records[0].readiness.generator_implemented -eq $true);exact_node_fault_ready_questions=@($records | Where-Object {$_.readiness.exact_node_fault_implemented}).Count;teacher_answers_generated=0;result='passed'}
 $utf8=New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $OutputDirectory 'validation.json'),($result | ConvertTo-Json -Depth 5),$utf8)
 $lines=@('验证日期：2026-11-13','通过：13管线115节点，各10题，共1150个稳定唯一ID。','通过：CSV/JSONL题面一致，115节点契约匹配。','通过：真实表/最低字段与仓库schema一致，12类缺口和任务编号全部可追溯。','通过：题面与输入/故障/证据边界可追踪；共享合成输入状态单独检查。',"负例拒绝数量：$negativeCount。",'限制：未连接ClickHouse、未运行真实重放/硬件测试；逐题专用合成输入及精确故障由独立报告验证；未生成题目答案。')

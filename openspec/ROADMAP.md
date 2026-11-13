@@ -8,7 +8,7 @@
 
 ## 当前边界
 
-- 已有：25表schema、115节点/1150题、12类缺口登记、共享合成生成器、200标的5日基础数据、订单/账本/辅助/专用资产输入及逐题读取器；1150份专用题目案例、575个前五题实验和575份节点场景均有独立校验证据。
+- 已有：25表schema、115节点/1150题、12类缺口登记、共享合成生成器、200标的5日基础数据、订单/账本/辅助/专用资产输入及逐题读取器；1150份专用题目案例、575个前五题实验和575份节点场景已通过结构与声明关系检查；原始事件独立语义复算覆盖2节点，113节点待审。
 - 尚无：真实ClickHouse抽取、真实自身订单/账户、真实专用资产、官方适用规则核验或硬件测量。合成故障覆盖不代替真实验收；未生产题目答案。
 - 本次治理变更完成后归档；未来实现任务保持未勾选，不因为本次规划而自动启动实盘或付费模型调用。
 
@@ -34,7 +34,7 @@
 
 ## 就绪与完成规则
 
-`design_ready`表示题面契约齐全；`synthetic_input_ready`表示基础合成输入可用；专用配方和独立校验通过时，`generator_implemented`的scope为shared_and_question_specific_synthetic_inputs，`exact_node_fault_implemented=true`表示声明的合成节点故障已覆盖。证据见precise-input-validation.json、逐题适配覆盖.csv及逐节点场景覆盖.csv。`dataset_ready`保留为真实/完整节点数据门槛，不能由synthetic自动升档；真实校准仍false。
+`design_ready`表示题面契约齐全；`synthetic_input_ready`表示基础合成输入可用；专用配方和独立校验通过时，`generator_implemented`的scope为shared_and_question_specific_synthetic_inputs，`exact_node_fault_implemented=true`仅用于已有原始事件独立复算证据的节点，当前为P02-S01、P11-S05；113节点待审。证据见precise-input-validation.json、逐题适配覆盖.csv及逐节点场景覆盖.csv。`dataset_ready`保留为真实/完整节点数据门槛，不能由synthetic自动升档；真实校准仍false。
 
 执行后更新tasks和证据路径，再运行进度与验证。全部任务有证据才归档；归档将已实现的delta同步主specs。未来能力在changes/specs中提出，不能提前复制到主specs冒充现状。
 
@@ -48,3 +48,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-progress.ps1
 ```
 
 本项目使用OpenSpec官方v2.0.0本地CLI，未生成特定编辑器技能；可直接通过上述命令管理。流程定义参考[官方仓库](https://github.com/Fission-AI/OpenSpec)。
+
+## 审查修复与后续验收
+
+fix-question-input-review修复五项具体审查问题：故障成因、场景选择、200股输入、原始窗口复算和价格单位。审查修复不代表其余节点语义已完成；后续由[audit-question-input-semantics](changes/audit-question-input-semantics/tasks.md)的13项管线任务管理113节点。真实数据接入的9项任务继续保留，教师生产仍延期。
