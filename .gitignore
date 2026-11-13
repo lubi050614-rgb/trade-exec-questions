@@ -7,3 +7,8 @@ __pycache__/
 .venv/
 .idea/
 .vscode/
+.tools/
+.openspec-cache/
+data/generated/
+data/private/
+reports/local/

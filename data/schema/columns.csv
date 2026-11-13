@@ -1,0 +1,494 @@
+﻿table_name,engine,position,column_name,type,default_kind,default_expression,comment
+Qsim_backward_adjustments,MergeTree,1,date,Date,,,
+Qsim_backward_adjustments,MergeTree,2,order_book_id,LowCardinality(String),,,
+Qsim_backward_adjustments,MergeTree,3,asset_type,LowCardinality(String),,,
+Qsim_backward_adjustments,MergeTree,4,adjustment_type,LowCardinality(String),,,
+Qsim_backward_adjustments,MergeTree,5,backward_factor,Nullable(Float64),,,
+Qsim_backward_adjustments,MergeTree,6,base_date,Nullable(Date),,,
+Qsim_backward_adjustments,MergeTree,7,chain_complete,UInt8,,,
+Qsim_backward_adjustments,MergeTree,8,segment_id,UInt32,,,
+Qsim_backward_adjustments,MergeTree,9,segment_base_date,Nullable(Date),,,
+Qsim_backward_adjustments,MergeTree,10,segment_backward_factor,Nullable(Float64),,,
+Qsim_backward_adjustments,MergeTree,11,daily_multiplier,Nullable(Float64),,,
+Qsim_backward_adjustments,MergeTree,12,close,Nullable(Float64),,,
+Qsim_backward_adjustments,MergeTree,13,prev_close,Nullable(Float64),,,
+Qsim_backward_adjustments,MergeTree,14,previous_date,Nullable(Date),,,
+Qsim_backward_adjustments,MergeTree,15,previous_close,Nullable(Float64),,,
+Qsim_backward_adjustments,MergeTree,16,quality_status,LowCardinality(String),,,
+Qsim_backward_adjustments,MergeTree,17,needs_review,UInt8,,,
+Qsim_bars_1d,MergeTree,1,date,Date,,,
+Qsim_bars_1d,MergeTree,2,order_book_id,LowCardinality(String),,,
+Qsim_bars_1d,MergeTree,3,bar_id,Int64,,,
+Qsim_bars_1d,MergeTree,4,open_adj,Nullable(Float64),,,
+Qsim_bars_1d,MergeTree,5,close_adj,Nullable(Float64),,,
+Qsim_bars_1d,MergeTree,6,bar_complete,UInt8,,,
+Qsim_bars_1d,MergeTree,7,source_rows,UInt16,,,
+Qsim_bars_1d,MergeTree,8,vwap_raw,Nullable(Float64),,,
+Qsim_bars_1d,MergeTree,9,vwap_adj,Nullable(Float64),,,
+Qsim_bars_1d,MergeTree,10,volume,Nullable(Float64),,,
+Qsim_bars_1d,MergeTree,11,total_turnover,Nullable(Float64),,,
+Qsim_bars_1d,MergeTree,12,vwap_outside_ohlc,UInt8,,,
+Qsim_bars_30m,MergeTree,1,date,Date,,,
+Qsim_bars_30m,MergeTree,2,order_book_id,LowCardinality(String),,,
+Qsim_bars_30m,MergeTree,3,bar_id,Int64,,,
+Qsim_bars_30m,MergeTree,4,open_adj,Nullable(Float64),,,
+Qsim_bars_30m,MergeTree,5,close_adj,Nullable(Float64),,,
+Qsim_bars_30m,MergeTree,6,bar_complete,UInt8,,,
+Qsim_bars_30m,MergeTree,7,source_rows,UInt16,,,
+Qsim_bars_30m,MergeTree,8,vwap_raw,Nullable(Float64),,,
+Qsim_bars_30m,MergeTree,9,vwap_adj,Nullable(Float64),,,
+Qsim_bars_30m,MergeTree,10,volume,Nullable(Float64),,,
+Qsim_bars_30m,MergeTree,11,total_turnover,Nullable(Float64),,,
+Qsim_bars_30m,MergeTree,12,vwap_outside_ohlc,UInt8,,,
+Qsim_calendar,MergeTree,1,date,Date,,,
+Qsim_calendar,MergeTree,2,frequency,LowCardinality(String),,,
+Qsim_calendar,MergeTree,3,bar_id,Int64,,,
+Qsim_calendar,MergeTree,4,session_id,Int32,,,
+Qsim_calendar,MergeTree,5,bar_index,Int16,,,
+Qsim_calendar,MergeTree,6,session,LowCardinality(String),,,
+Qsim_calendar,MergeTree,7,bar_start,"DateTime64(3, 'Asia/Shanghai')",,,
+Qsim_calendar,MergeTree,8,bar_end,"DateTime64(3, 'Asia/Shanghai')",,,
+Qsim_calendar,MergeTree,9,previous_bar_id,Nullable(Int64),,,
+Qsim_calendar,MergeTree,10,next_bar_id,Nullable(Int64),,,
+Qsim_st_history,MergeTree,1,date,Date,,,
+Qsim_st_history,MergeTree,2,order_book_id,LowCardinality(String),,,
+Qsim_st_history,MergeTree,3,available_at,"DateTime64(3, 'Asia/Shanghai')",,,
+Qsim_st_history,MergeTree,4,is_st,Nullable(UInt8),,,
+Qsim_universe_all_a,MergeTree,1,date,Date,,,
+Qsim_universe_all_a,MergeTree,2,order_book_id,LowCardinality(String),,,
+Qsim_universe_all_a,MergeTree,3,in_all_a,UInt8,,,
+Qsim_universe_all_a,MergeTree,4,has_daily_price,UInt8,,,
+Qsim_universe_all_a,MergeTree,5,suspended,Nullable(UInt8),,,
+Qsim_universe_all_a,MergeTree,6,has_daily_trade,UInt8,,,
+Qsim_universe_all_a,MergeTree,7,st_status,Nullable(UInt8),,,
+qinml_l2_features_30m_batches_v1,MergeTree,1,batch_id,UUID,,,
+qinml_l2_features_30m_batches_v1,MergeTree,2,event_time,"DateTime64(3, 'Asia/Shanghai')",,,
+qinml_l2_features_30m_batches_v1,MergeTree,3,status,String,,,
+qinml_l2_features_30m_batches_v1,MergeTree,4,checks_passed,UInt8,,,
+qinml_l2_features_30m_batches_v1,MergeTree,5,row_count,UInt32,,,
+qinml_l2_features_30m_batches_v1,MergeTree,6,date_start,Date,,,
+qinml_l2_features_30m_batches_v1,MergeTree,7,date_end,Date,,,
+qinml_l2_features_30m_batches_v1,MergeTree,8,symbols,Array(String),,,
+qinml_l2_features_30m_batches_v1,MergeTree,9,formula_version,String,,,
+qinml_l2_features_30m_batches_v1,MergeTree,10,config_hashes,Array(String),,,
+qinml_l2_features_30m_batches_v1,MergeTree,11,payload_hash,String,,,
+qinml_l2_features_30m_batches_v1,MergeTree,12,manifest_path,String,,,
+qinml_l2_features_30m_batches_v1,MergeTree,13,detail,String,,,
+qinml_l2_features_30m_v1,MergeTree,1,symbol,String,,,
+qinml_l2_features_30m_v1,MergeTree,2,trade_date,Date,,,
+qinml_l2_features_30m_v1,MergeTree,3,window_start,"DateTime64(3, 'Asia/Shanghai')",,,
+qinml_l2_features_30m_v1,MergeTree,4,window_end,"DateTime64(3, 'Asia/Shanghai')",,,
+qinml_l2_features_30m_v1,MergeTree,5,window_seconds,UInt16,,,
+qinml_l2_features_30m_v1,MergeTree,6,is_session_tail,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,7,mid_price_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,8,mid_price_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,9,spread_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,10,spread_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,11,relative_spread_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,12,relative_spread_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,13,bid1_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,14,bid1_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,15,ask1_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,16,ask1_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,17,weighted_mid_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,18,weighted_mid_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,19,weighted_mid_offset_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,20,weighted_mid_offset_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,21,bid_price_gap_1_10_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,22,bid_price_gap_1_10_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,23,ask_price_gap_1_10_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,24,ask_price_gap_1_10_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,25,bid_depth_1_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,26,bid_depth_1_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,27,ask_depth_1_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,28,ask_depth_1_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,29,depth_imbalance_1_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,30,depth_imbalance_1_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,31,bid_depth_5_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,32,bid_depth_5_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,33,ask_depth_5_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,34,ask_depth_5_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,35,depth_imbalance_5_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,36,depth_imbalance_5_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,37,bid_depth_10_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,38,bid_depth_10_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,39,ask_depth_10_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,40,ask_depth_10_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,41,depth_imbalance_10_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,42,depth_imbalance_10_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,43,bid_top1_share_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,44,bid_top1_share_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,45,bid_depth_hhi_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,46,bid_depth_hhi_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,47,bid_depth_weighted_price_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,48,bid_depth_weighted_price_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,49,ask_top1_share_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,50,ask_top1_share_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,51,ask_depth_hhi_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,52,ask_depth_hhi_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,53,ask_depth_weighted_price_last,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,54,ask_depth_weighted_price_twap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,55,quote_update_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,56,quote_invalid_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,57,quote_valid_seconds,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,58,quote_coverage_ratio,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,59,quote_mid_change_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,60,quote_age_ms,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,61,snapshot_ofi,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,62,snapshot_mid_return,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,63,snapshot_mid_rv,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,64,trade_open,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,65,trade_high,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,66,trade_low,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,67,trade_close,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,68,trade_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,69,trade_amount,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,70,trade_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,71,vwap,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,72,avg_trade_size,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,73,trade_size_std,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,74,trade_size_p50,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,75,trade_size_p90,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,76,trade_size_max,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,77,large_trade_volume_share,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,78,buy_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,79,sell_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,80,unknown_side_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,81,trade_imbalance,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,82,buy_amount,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,83,sell_amount,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,84,trade_price_std,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,85,trade_gap_mean_ms,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,86,trade_gap_max_ms,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,87,cancel_event_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,88,cancel_event_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,89,new_order_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,90,new_order_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,91,new_order_amount,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,92,new_order_size_mean,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,93,new_order_size_max,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,94,cancel_order_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,95,cancel_order_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,96,net_buy_order_flow,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,97,net_sell_order_flow,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,98,new_order_imbalance,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,99,cancel_to_new_volume_ratio,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,100,new_buy_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,101,new_sell_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,102,new_unknown_side_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,103,cancel_buy_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,104,cancel_sell_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,105,cancel_unknown_side_volume,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,106,trade_raw_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,107,trade_invalid_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,108,trade_unknown_code_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,109,order_raw_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,110,order_invalid_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,111,order_unknown_code_count,Nullable(Float64),,,
+qinml_l2_features_30m_v1,MergeTree,112,source_slice_complete,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,113,semantics_confirmed,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,114,price_divisor_known,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,115,volume_multiplier_known,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,116,trade_semantics_ready,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,117,order_semantics_ready,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,118,trade_side_ready,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,119,order_side_ready,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,120,feed_completeness_checked,UInt8,,,
+qinml_l2_features_30m_v1,MergeTree,121,formula_version,String,,,
+qinml_l2_features_30m_v1,MergeTree,122,config_hash,String,,,
+qinml_l2_features_30m_v1,MergeTree,123,source_fingerprint,String,,,
+qinml_l2_features_30m_v1,MergeTree,124,batch_id,UUID,,,
+qinml_l2_features_30m_v1,MergeTree,125,generated_at,"DateTime64(3, 'Asia/Shanghai')",,,
+qinml_l2_features_30m_v1,MergeTree,126,quality_status,String,,,
+qinml_l2_features_30m_v1,MergeTree,127,row_hash,String,,,
+qinml_qsim_adjustments_v1,MergeTree,1,source_version,String,,,
+qinml_qsim_adjustments_v1,MergeTree,2,batch_id,String,,,
+qinml_qsim_adjustments_v1,MergeTree,3,row_number,UInt32,,,
+qinml_qsim_adjustments_v1,MergeTree,4,order_book_id,String,,,
+qinml_qsim_adjustments_v1,MergeTree,5,date,Date,,,
+qinml_qsim_adjustments_v1,MergeTree,6,asset_type,String,,,
+qinml_qsim_adjustments_v1,MergeTree,7,adjustment_type,String,,,
+qinml_qsim_adjustments_v1,MergeTree,8,backward_factor,Nullable(Float64),,,
+qinml_qsim_adjustments_v1,MergeTree,9,base_date,Nullable(Date),,,
+qinml_qsim_adjustments_v1,MergeTree,10,chain_complete,UInt8,,,
+qinml_qsim_adjustments_v1,MergeTree,11,segment_id,UInt32,,,
+qinml_qsim_adjustments_v1,MergeTree,12,segment_base_date,Nullable(Date),,,
+qinml_qsim_adjustments_v1,MergeTree,13,segment_backward_factor,Nullable(Float64),,,
+qinml_qsim_adjustments_v1,MergeTree,14,daily_multiplier,Nullable(Float64),,,
+qinml_qsim_adjustments_v1,MergeTree,15,close,Nullable(Float64),,,
+qinml_qsim_adjustments_v1,MergeTree,16,prev_close,Nullable(Float64),,,
+qinml_qsim_adjustments_v1,MergeTree,17,previous_date,Nullable(Date),,,
+qinml_qsim_adjustments_v1,MergeTree,18,previous_close,Nullable(Float64),,,
+qinml_qsim_adjustments_v1,MergeTree,19,quality_status,String,,,
+qinml_qsim_adjustments_v1,MergeTree,20,needs_review,UInt8,,,
+rq_adjustment_local,MergeTree,1,market,LowCardinality(String),,,市场
+rq_adjustment_local,MergeTree,2,security_code,String,,,证券代码
+rq_adjustment_local,MergeTree,3,effective_date,Date,,,生效日期
+rq_adjustment_local,MergeTree,4,adjustment_type,LowCardinality(String),,,调整指标类型
+rq_adjustment_local,MergeTree,5,value,Nullable(Float64),,,调整指标值
+rq_adjustment_local,MergeTree,6,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_adjustment_local,MergeTree,7,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_adjustment_local,MergeTree,8,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_beta_local,MergeTree,1,market,LowCardinality(String),,,SSE: 上交所，SZSE: 深交所
+rq_beta_local,MergeTree,2,security_code,String,,,证券代码
+rq_beta_local,MergeTree,3,trade_date,Date,,,交易日期
+rq_beta_local,MergeTree,4,benchmark_market,LowCardinality(String),,,SSE: 上交所
+rq_beta_local,MergeTree,5,benchmark_code,String,,,基准代码
+rq_beta_local,MergeTree,6,model,LowCardinality(String),,,模型版本
+rq_beta_local,MergeTree,7,window_days,UInt32,,,计算窗口天数
+rq_beta_local,MergeTree,8,value,Nullable(Float64),,,贝塔系数
+rq_beta_local,MergeTree,9,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_beta_local,MergeTree,10,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_beta_local,MergeTree,11,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_factor_value_local,MergeTree,1,market,LowCardinality(String),,,BSE: 北交所，INDX: 指数，RI: 米筐指数，SSE: 上交所，SZSE: 深交所
+rq_factor_value_local,MergeTree,2,security_code,String,,,证券代码
+rq_factor_value_local,MergeTree,3,trade_date,Date,,,交易日期
+rq_factor_value_local,MergeTree,4,factor_set,LowCardinality(String),,,因子类别
+rq_factor_value_local,MergeTree,5,model,LowCardinality(String),,,模型版本
+rq_factor_value_local,MergeTree,6,factor_name,LowCardinality(String),,,因子名称
+rq_factor_value_local,MergeTree,7,value,Nullable(Float64),,,因子值
+rq_factor_value_local,MergeTree,8,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_factor_value_local,MergeTree,9,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_factor_value_local,MergeTree,10,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_financial_pit_local,MergeTree,1,market,LowCardinality(String),,,BSE: 北交所，SSE: 上交所，SZSE: 深交所
+rq_financial_pit_local,MergeTree,2,security_code,String,,,证券代码
+rq_financial_pit_local,MergeTree,3,statement_type,LowCardinality(String),,,财务报表类型。main_data: 主要指标，rnd: 研发支出，ttm: TTM
+rq_financial_pit_local,MergeTree,4,quarter,String,,,财务报告期
+rq_financial_pit_local,MergeTree,5,info_date,Date,,,财务信息日期
+rq_financial_pit_local,MergeTree,6,if_adjusted,UInt8,,,财报调整标志
+rq_financial_pit_local,MergeTree,7,rice_create_tm,"Nullable(DateTime64(3, 'Asia/Shanghai'))",,,记录创建或修订时间
+rq_financial_pit_local,MergeTree,8,metric,LowCardinality(String),,,财务指标名称。main_data: adjusted_net_profit 扣非净利润，return_on_equity_weighted_average 加权平均净资产收益率。rnd: expensed_rnd 费用化研发支出，capitalized_rnd 资本化研发支出，total_rnd 研发支出合计，rnd_to_revenue 研发支出占营业收入比例，capitalized_rnd_ratio 资本化研发支出比重，rnd_employees 研发人员数量，rnd_employees_ratio 研发人员占比。ttm: operating_expenseTTM 销售费用，operating_costTTM 营业成本，net_invest_cashflowTTM 投资活动现金流量净额，sale_service_render_cashTTM 销售商品提供劳务收到的现金，ebitTTM 息税前利润，operating_revenueTTM 营业收入，operating_profitTTM 营业利润，ni_from_operatingTTM 经营活动净收益，net_cashflowTTM 现金及现金等价物净增加额，net_finance_cashflowTTM 筹资活动现金流量净额，net_operate_cashflowTTM 经营活动现金流量净额，operating_payoutTTM 营业支出，asset_impairment_lossTTM 资产减值损失，non_operating_net_incomeTTM 营业外收支净额，administration_expenseTTM 管理费用，gross_profitTTM 毛利，total_operating_costTTM 营业总成本，financial_expenseTTM 财务费用，ni_from_value_changeTTM 价值变动净收益，np_parent_company_ownersTTM 归母净利润，net_profitTTM 净利润，total_profitTTM 利润总额，total_operating_revenueTTM 营业总收入
+rq_financial_pit_local,MergeTree,9,value,Nullable(Float64),,,财务指标值
+rq_financial_pit_local,MergeTree,10,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_financial_pit_local,MergeTree,11,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_financial_pit_local,MergeTree,12,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_index_weight_local,MergeTree,1,index_market,LowCardinality(String),,,指数市场。SSE: 上交所
+rq_index_weight_local,MergeTree,2,index_code,String,,,指数代码
+rq_index_weight_local,MergeTree,3,market,LowCardinality(String),,,成分证券市场。BSE: 北交所，SSE: 上交所，SZSE: 深交所
+rq_index_weight_local,MergeTree,4,security_code,String,,,成分证券代码
+rq_index_weight_local,MergeTree,5,trade_date,Date,,,交易日期
+rq_index_weight_local,MergeTree,6,weight,Float64,,,成分股在指数中的权重。沪深300、中证500、中证1000为日度权重。国证2000为月度权重向前填充到该交易日。0 表示当天权重为零，仍然是成分
+rq_index_weight_local,MergeTree,7,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_index_weight_local,MergeTree,8,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_index_weight_local,MergeTree,9,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_instrument_versions_local,MergeTree,1,market,LowCardinality(String),,,BSE: 北交所，INDX: 指数，RI: 米筐指数，SSE: 上交所，SZSE: 深交所
+rq_instrument_versions_local,MergeTree,2,security_code,String,,,证券代码
+rq_instrument_versions_local,MergeTree,3,asset_type,LowCardinality(String),,,STOCK: 股票，ETF: ETF，INDEX: 指数
+rq_instrument_versions_local,MergeTree,4,instrument_name,String,,,证券名称
+rq_instrument_versions_local,MergeTree,5,listed_date,Nullable(Date32),,,上市日期
+rq_instrument_versions_local,MergeTree,6,delisted_date,Nullable(Date32),,,退市日期
+rq_instrument_versions_local,MergeTree,7,raw_listed_date,String,,,原始上市日期
+rq_instrument_versions_local,MergeTree,8,raw_delisted_date,String,,,原始退市日期
+rq_instrument_versions_local,MergeTree,9,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_instrument_versions_local,MergeTree,10,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_instrument_versions_local,MergeTree,11,abbrev_symbol,String,DEFAULT,'',证券简称拼音缩写
+rq_instrument_versions_local,MergeTree,12,exchange,String,DEFAULT,'',米筐交易所代码
+rq_instrument_versions_local,MergeTree,13,status,String,DEFAULT,'',合约状态
+rq_instrument_versions_local,MergeTree,14,board_type,String,DEFAULT,'',板块，股票和 ETF
+rq_instrument_versions_local,MergeTree,15,industry_code,String,DEFAULT,'',国民经济行业代码，仅股票
+rq_instrument_versions_local,MergeTree,16,industry_name,String,DEFAULT,'',国民经济行业名称，仅股票
+rq_instrument_versions_local,MergeTree,17,issue_price,String,DEFAULT,'',发行价原文，仅股票
+rq_instrument_versions_local,MergeTree,18,market_tplus,String,DEFAULT,'',T+N 交易制度
+rq_instrument_versions_local,MergeTree,19,office_address,String,DEFAULT,'',办公地址，仅股票
+rq_instrument_versions_local,MergeTree,20,province,String,DEFAULT,'',省份，仅股票
+rq_instrument_versions_local,MergeTree,21,purchasedate,String,DEFAULT,'',申购日期原文，仅股票，含星期
+rq_instrument_versions_local,MergeTree,22,round_lot,String,DEFAULT,'',每手股数原文
+rq_instrument_versions_local,MergeTree,23,sector_code,String,DEFAULT,'',板块代码，仅股票
+rq_instrument_versions_local,MergeTree,24,sector_code_name,String,DEFAULT,'',板块名称，仅股票
+rq_instrument_versions_local,MergeTree,25,special_type,String,DEFAULT,'',特别处理类型，仅股票
+rq_instrument_versions_local,MergeTree,26,trading_code,String,DEFAULT,'',交易代码，股票和 ETF
+rq_instrument_versions_local,MergeTree,27,trading_hours,String,DEFAULT,'',交易时段
+rq_instrument_versions_local,MergeTree,28,establishment_date,String,DEFAULT,'',成立日期原文，仅 ETF
+rq_instrument_versions_local,MergeTree,29,fund_type,String,DEFAULT,'',基金类型，仅 ETF
+rq_instrument_versions_local,MergeTree,30,latest_size,String,DEFAULT,'',最新规模原文，仅 ETF
+rq_instrument_versions_local,MergeTree,31,least_redeem,String,DEFAULT,'',最小申赎单位原文，仅 ETF
+rq_instrument_versions_local,MergeTree,32,underlying_name,String,DEFAULT,'',跟踪标的名称，仅 ETF
+rq_instrument_versions_local,MergeTree,33,underlying_order_book_id,String,DEFAULT,'',跟踪标的代码，仅 ETF
+rq_instrument_versions_local,MergeTree,34,base_date,String,DEFAULT,'',指数基日原文，仅指数
+rq_instrument_versions_local,MergeTree,35,base_point,String,DEFAULT,'',指数基点原文，仅指数
+rq_instrument_versions_local,MergeTree,36,underlying_symbol,String,DEFAULT,'',对应标的代码，仅指数
+rq_risk_covariance_local,MergeTree,1,trade_date,Date,,,交易日期
+rq_risk_covariance_local,MergeTree,2,model,LowCardinality(String),,,模型版本
+rq_risk_covariance_local,MergeTree,3,factor_i,LowCardinality(String),,,行因子名称
+rq_risk_covariance_local,MergeTree,4,factor_j,LowCardinality(String),,,列因子名称
+rq_risk_covariance_local,MergeTree,5,value,Nullable(Float64),,,协方差
+rq_risk_covariance_local,MergeTree,6,units,String,,,单位与统计口径
+rq_risk_covariance_local,MergeTree,7,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_risk_covariance_local,MergeTree,8,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_risk_covariance_local,MergeTree,9,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_stock_bar_1d_local,MergeTree,1,market,LowCardinality(String),,,BSE: 北交所，INDX: 指数，RI: 米筐指数，SSE: 上交所，SZSE: 深交所
+rq_stock_bar_1d_local,MergeTree,2,security_code,String,,,证券代码
+rq_stock_bar_1d_local,MergeTree,3,trade_date,Date,,,交易日期
+rq_stock_bar_1d_local,MergeTree,4,open,Nullable(Float64),,,开盘价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,5,high,Nullable(Float64),,,最高价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,6,low,Nullable(Float64),,,最低价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,7,close,Nullable(Float64),,,收盘价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,8,volume,Nullable(Float64),,,成交数量
+rq_stock_bar_1d_local,MergeTree,9,total_turnover,Nullable(Float64),,,成交金额
+rq_stock_bar_1d_local,MergeTree,10,num_trades,Nullable(Float64),,,成交笔数
+rq_stock_bar_1d_local,MergeTree,11,iopv,Nullable(Float64),,,基金份额参考净值，原值乘10000
+rq_stock_bar_1d_local,MergeTree,12,prev_close,Nullable(Float64),,,昨收价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,13,limit_up,Nullable(Float64),,,涨停价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,14,limit_down,Nullable(Float64),,,跌停价，原值乘10000
+rq_stock_bar_1d_local,MergeTree,15,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_stock_bar_1d_local,MergeTree,16,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_stock_bar_1d_local,MergeTree,17,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_stock_bar_1m_local,MergeTree,1,market,LowCardinality(String),,,BSE: 北交所，INDX: 指数，RI: 米筐指数，SSE: 上交所，SZSE: 深交所
+rq_stock_bar_1m_local,MergeTree,2,security_code,String,,,证券代码
+rq_stock_bar_1m_local,MergeTree,3,bar_end,"DateTime64(3, 'Asia/Shanghai')",,,分钟结束时间
+rq_stock_bar_1m_local,MergeTree,4,trade_date,Date,MATERIALIZED,toDate(bar_end),交易日期
+rq_stock_bar_1m_local,MergeTree,5,open,Nullable(Float64),,,开盘价，原值乘10000
+rq_stock_bar_1m_local,MergeTree,6,high,Nullable(Float64),,,最高价，原值乘10000
+rq_stock_bar_1m_local,MergeTree,7,low,Nullable(Float64),,,最低价，原值乘10000
+rq_stock_bar_1m_local,MergeTree,8,close,Nullable(Float64),,,收盘价，原值乘10000
+rq_stock_bar_1m_local,MergeTree,9,volume,Nullable(Float64),,,成交数量
+rq_stock_bar_1m_local,MergeTree,10,total_turnover,Nullable(Float64),,,成交金额
+rq_stock_bar_1m_local,MergeTree,11,num_trades,Nullable(Float64),,,成交笔数
+rq_stock_bar_1m_local,MergeTree,12,iopv,Nullable(Float64),,,基金份额参考净值，原值乘10000
+rq_stock_bar_1m_local,MergeTree,13,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_stock_bar_1m_local,MergeTree,14,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_stock_bar_1m_local,MergeTree,15,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_trading_calendar_local,MergeTree,1,trade_date,Date,,,交易日期
+rq_trading_calendar_local,MergeTree,2,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_trading_calendar_local,MergeTree,3,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_trading_calendar_local,MergeTree,4,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+rq_trading_status_local,MergeTree,1,market,LowCardinality(String),,,BSE: 北交所，SSE: 上交所，SZSE: 深交所
+rq_trading_status_local,MergeTree,2,security_code,String,,,证券代码
+rq_trading_status_local,MergeTree,3,trade_date,Date,,,交易日期
+rq_trading_status_local,MergeTree,4,suspended,Nullable(UInt8),,,0: 未停牌，1: 全天停牌
+rq_trading_status_local,MergeTree,5,st_flag,Nullable(UInt8),,,0: 非ST，1: ST或*ST
+rq_trading_status_local,MergeTree,6,limit_up,Nullable(Float64),,,涨停价
+rq_trading_status_local,MergeTree,7,limit_down,Nullable(Float64),,,跌停价
+rq_trading_status_local,MergeTree,8,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+rq_trading_status_local,MergeTree,9,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+rq_trading_status_local,MergeTree,10,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+wind_book_checkpoint_local,MergeTree,1,market,LowCardinality(String),,,市场
+wind_book_checkpoint_local,MergeTree,2,security_code,String,,,证券代码
+wind_book_checkpoint_local,MergeTree,3,ts,"DateTime64(3, 'Asia/Shanghai')",,,检查点时间
+wind_book_checkpoint_local,MergeTree,4,trade_date,Date,MATERIALIZED,toDate(ts),交易日期
+wind_book_checkpoint_local,MergeTree,5,reconstruction_policy,String,,,订单簿重建规则版本
+wind_book_checkpoint_local,MergeTree,6,checkpoint_kind,LowCardinality(String),,,检查点类型
+wind_book_checkpoint_local,MergeTree,7,bid_prices,Array(Int64),,,买档价格数组 * 10000
+wind_book_checkpoint_local,MergeTree,8,bid_volumes,Array(Int64),,,买档数量数组
+wind_book_checkpoint_local,MergeTree,9,ask_prices,Array(Int64),,,卖档价格数组 * 10000
+wind_book_checkpoint_local,MergeTree,10,ask_volumes,Array(Int64),,,卖档数量数组
+wind_book_checkpoint_local,MergeTree,11,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+wind_book_checkpoint_local,MergeTree,12,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+wind_book_quality_local,MergeTree,1,market,LowCardinality(String),,,市场
+wind_book_quality_local,MergeTree,2,security_code,String,,,证券代码
+wind_book_quality_local,MergeTree,3,trade_date,Date,,,交易日期
+wind_book_quality_local,MergeTree,4,window_start,"DateTime64(3, 'Asia/Shanghai')",,,窗口开始时间
+wind_book_quality_local,MergeTree,5,window_end,"DateTime64(3, 'Asia/Shanghai')",,,窗口结束时间
+wind_book_quality_local,MergeTree,6,order_rows,UInt64,,,委托记录数
+wind_book_quality_local,MergeTree,7,trade_rows,UInt64,,,逐笔记录数
+wind_book_quality_local,MergeTree,8,quote_rows,UInt64,,,快照记录数
+wind_book_quality_local,MergeTree,9,ambiguous_groups,UInt64,,,顺序歧义组数
+wind_book_quality_local,MergeTree,10,unresolved_refs,UInt64,,,未匹配委托引用数
+wind_book_quality_local,MergeTree,11,gap_count,UInt64,,,序列缺口数
+wind_book_quality_local,MergeTree,12,reconstruction_policy,String,,,订单簿重建规则版本
+wind_book_quality_local,MergeTree,13,confidence,LowCardinality(String),,,重建可信度
+wind_book_quality_local,MergeTree,14,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+wind_book_quality_local,MergeTree,15,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+wind_order_local,MergeTree,1,security_code,String,,,证券代码
+wind_order_local,MergeTree,2,market,LowCardinality(String),,,SSE: 上交所，SZSE: 深交所
+wind_order_local,MergeTree,3,ts,"DateTime64(3, 'Asia/Shanghai')",,,事件时间
+wind_order_local,MergeTree,4,order_no,Int64,,,委托编号
+wind_order_local,MergeTree,5,exchange_order_id,Int64,,,交易所委托编号
+wind_order_local,MergeTree,6,order_type,LowCardinality(String),,,委托类型
+wind_order_local,MergeTree,7,order_code,LowCardinality(String),,,委托业务代码
+wind_order_local,MergeTree,8,price,Int64,,,价格 * 10000
+wind_order_local,MergeTree,9,volume,Int64,,,数量
+wind_order_local,MergeTree,10,trade_date,Date,MATERIALIZED,toDate(ts),交易日期
+wind_order_local,MergeTree,11,channel_id,Nullable(UInt32),,,通道编号
+wind_order_local,MergeTree,12,exchange_seq,Nullable(UInt64),,,交易所事件序号
+wind_order_local,MergeTree,13,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+wind_order_local,MergeTree,14,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+wind_order_local,MergeTree,15,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+wind_quote_local,MergeTree,1,security_code,String,,,证券代码
+wind_quote_local,MergeTree,2,market,LowCardinality(String),,,SSE: 上交所，SZSE: 深交所
+wind_quote_local,MergeTree,3,ts,"DateTime64(3, 'Asia/Shanghai')",,,事件时间
+wind_quote_local,MergeTree,4,price,Int64,,,价格 * 10000
+wind_quote_local,MergeTree,5,volume,Int64,,,数量
+wind_quote_local,MergeTree,6,amount,Int64,,,金额
+wind_quote_local,MergeTree,7,trade_count,Int64,,,成交笔数
+wind_quote_local,MergeTree,8,iopv,Int64,,,基金份额参考净值
+wind_quote_local,MergeTree,9,trade_flag,LowCardinality(String),,,交易标记
+wind_quote_local,MergeTree,10,bs_flag,LowCardinality(String),,,买卖方向
+wind_quote_local,MergeTree,11,acc_volume,Int64,,,累计成交数量
+wind_quote_local,MergeTree,12,acc_amount,Int64,,,累计成交金额
+wind_quote_local,MergeTree,13,high,Int64,,,最高价 * 10000
+wind_quote_local,MergeTree,14,low,Int64,,,最低价 * 10000
+wind_quote_local,MergeTree,15,open,Int64,,,开盘价 * 10000
+wind_quote_local,MergeTree,16,pre_close,Int64,,,前收盘价 * 10000
+wind_quote_local,MergeTree,17,ask_price_1,Int64,,,卖1价 * 10000
+wind_quote_local,MergeTree,18,ask_price_2,Int64,,,卖2价 * 10000
+wind_quote_local,MergeTree,19,ask_price_3,Int64,,,卖3价 * 10000
+wind_quote_local,MergeTree,20,ask_price_4,Int64,,,卖4价 * 10000
+wind_quote_local,MergeTree,21,ask_price_5,Int64,,,卖5价 * 10000
+wind_quote_local,MergeTree,22,ask_price_6,Int64,,,卖6价 * 10000
+wind_quote_local,MergeTree,23,ask_price_7,Int64,,,卖7价 * 10000
+wind_quote_local,MergeTree,24,ask_price_8,Int64,,,卖8价 * 10000
+wind_quote_local,MergeTree,25,ask_price_9,Int64,,,卖9价 * 10000
+wind_quote_local,MergeTree,26,ask_price_10,Int64,,,卖10价 * 10000
+wind_quote_local,MergeTree,27,ask_volume_1,Int64,,,卖1数量
+wind_quote_local,MergeTree,28,ask_volume_2,Int64,,,卖2数量
+wind_quote_local,MergeTree,29,ask_volume_3,Int64,,,卖3数量
+wind_quote_local,MergeTree,30,ask_volume_4,Int64,,,卖4数量
+wind_quote_local,MergeTree,31,ask_volume_5,Int64,,,卖5数量
+wind_quote_local,MergeTree,32,ask_volume_6,Int64,,,卖6数量
+wind_quote_local,MergeTree,33,ask_volume_7,Int64,,,卖7数量
+wind_quote_local,MergeTree,34,ask_volume_8,Int64,,,卖8数量
+wind_quote_local,MergeTree,35,ask_volume_9,Int64,,,卖9数量
+wind_quote_local,MergeTree,36,ask_volume_10,Int64,,,卖10数量
+wind_quote_local,MergeTree,37,bid_price_1,Int64,,,买1价 * 10000
+wind_quote_local,MergeTree,38,bid_price_2,Int64,,,买2价 * 10000
+wind_quote_local,MergeTree,39,bid_price_3,Int64,,,买3价 * 10000
+wind_quote_local,MergeTree,40,bid_price_4,Int64,,,买4价 * 10000
+wind_quote_local,MergeTree,41,bid_price_5,Int64,,,买5价 * 10000
+wind_quote_local,MergeTree,42,bid_price_6,Int64,,,买6价 * 10000
+wind_quote_local,MergeTree,43,bid_price_7,Int64,,,买7价 * 10000
+wind_quote_local,MergeTree,44,bid_price_8,Int64,,,买8价 * 10000
+wind_quote_local,MergeTree,45,bid_price_9,Int64,,,买9价 * 10000
+wind_quote_local,MergeTree,46,bid_price_10,Int64,,,买10价 * 10000
+wind_quote_local,MergeTree,47,bid_volume_1,Int64,,,买1数量
+wind_quote_local,MergeTree,48,bid_volume_2,Int64,,,买2数量
+wind_quote_local,MergeTree,49,bid_volume_3,Int64,,,买3数量
+wind_quote_local,MergeTree,50,bid_volume_4,Int64,,,买4数量
+wind_quote_local,MergeTree,51,bid_volume_5,Int64,,,买5数量
+wind_quote_local,MergeTree,52,bid_volume_6,Int64,,,买6数量
+wind_quote_local,MergeTree,53,bid_volume_7,Int64,,,买7数量
+wind_quote_local,MergeTree,54,bid_volume_8,Int64,,,买8数量
+wind_quote_local,MergeTree,55,bid_volume_9,Int64,,,买9数量
+wind_quote_local,MergeTree,56,bid_volume_10,Int64,,,买10数量
+wind_quote_local,MergeTree,57,avg_ask_price,Int64,,,平均卖价 * 10000
+wind_quote_local,MergeTree,58,avg_bid_price,Int64,,,平均买价 * 10000
+wind_quote_local,MergeTree,59,total_ask_volume,Int64,,,卖方委托总数量
+wind_quote_local,MergeTree,60,total_bid_volume,Int64,,,买方委托总数量
+wind_quote_local,MergeTree,61,unweighted_index,Int64,,,非加权指数
+wind_quote_local,MergeTree,62,security_count,Int64,,,证券数量
+wind_quote_local,MergeTree,63,up_count,Int64,,,上涨证券数量
+wind_quote_local,MergeTree,64,down_count,Int64,,,下跌证券数量
+wind_quote_local,MergeTree,65,flat_count,Int64,,,平盘证券数量
+wind_quote_local,MergeTree,66,trade_date,Date,MATERIALIZED,toDate(ts),交易日期
+wind_quote_local,MergeTree,67,channel_id,Nullable(UInt32),,,通道编号
+wind_quote_local,MergeTree,68,exchange_seq,Nullable(UInt64),,,交易所事件序号
+wind_quote_local,MergeTree,69,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+wind_quote_local,MergeTree,70,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+wind_quote_local,MergeTree,71,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间
+wind_trade_local,MergeTree,1,security_code,String,,,证券代码
+wind_trade_local,MergeTree,2,market,LowCardinality(String),,,SSE: 上交所，SZSE: 深交所
+wind_trade_local,MergeTree,3,ts,"DateTime64(3, 'Asia/Shanghai')",,,事件时间
+wind_trade_local,MergeTree,4,trade_id,Int64,,,逐笔记录编号
+wind_trade_local,MergeTree,5,trade_code,LowCardinality(String),,,逐笔业务代码
+wind_trade_local,MergeTree,6,order_code,LowCardinality(String),,,委托业务代码
+wind_trade_local,MergeTree,7,bs_flag,LowCardinality(String),,,买卖方向
+wind_trade_local,MergeTree,8,price,Int64,,,价格 * 10000
+wind_trade_local,MergeTree,9,volume,Int64,,,数量
+wind_trade_local,MergeTree,10,ask_order_id,Int64,,,卖方委托编号
+wind_trade_local,MergeTree,11,bid_order_id,Int64,,,买方委托编号
+wind_trade_local,MergeTree,12,trade_date,Date,MATERIALIZED,toDate(ts),交易日期
+wind_trade_local,MergeTree,13,channel_id,Nullable(UInt32),,,通道编号
+wind_trade_local,MergeTree,14,exchange_seq,Nullable(UInt64),,,交易所事件序号
+wind_trade_local,MergeTree,15,source_row_no,UInt64,,,来源文件行号。导入时按源文件读取顺序从 1 编号。MCP 翻页时放在排序键最后，用来判断上一行后面是哪一行；同一时间、同一证券、业务编号相同时靠它区分，避免漏行或重复。它不是交易所序号，不作为行情字段返回。
+wind_trade_local,MergeTree,16,createtime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,"now64(3, 'Asia/Shanghai')",创建时间
+wind_trade_local,MergeTree,17,updatetime,"DateTime64(3, 'Asia/Shanghai')",DEFAULT,createtime,更新时间

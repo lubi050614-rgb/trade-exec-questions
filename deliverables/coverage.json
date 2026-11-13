@@ -1,11 +1,16 @@
 {
+    "schema_version":  "2.0",
     "source":  "quant-tree-workspace-20261112-1800.json",
-    "date":  "2026-11-12",
+    "date":  "2026-11-13",
     "pipelines":  13,
     "nodes":  115,
     "questions":  1150,
     "specific_questions":  575,
     "cross_cutting_questions":  575,
+    "node_contracts":  115,
+    "design_ready_questions":  1150,
+    "dataset_ready_questions":  0,
+    "teacher_answers_generated":  0,
     "tables_in_columns":  25,
     "tables_in_observed":  13,
     "schema_issues":  [
@@ -78,5 +83,5 @@
                                 "questions":  90
                             }
                         ],
-    "validation":  "structural coverage only; no database query or teacher inference executed"
+    "validation":  "structural and node contract checks; no database query, fixture generator or teacher inference executed"
 }

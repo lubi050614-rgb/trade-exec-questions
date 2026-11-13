@@ -1,0 +1,42 @@
+[
+    {
+        "change":  "add-special-asset-fixtures",
+        "archived":  false,
+        "completed_tasks":  0,
+        "total_tasks":  7,
+        "implementation_status":  "planned",
+        "task_file":  "openspec/changes/add-special-asset-fixtures/tasks.md"
+    },
+    {
+        "change":  "2026-11-13-govern-data-gaps-and-question-bank",
+        "archived":  true,
+        "completed_tasks":  9,
+        "total_tasks":  9,
+        "implementation_status":  "complete",
+        "task_file":  "openspec/changes/archive/2026-11-13-govern-data-gaps-and-question-bank/tasks.md"
+    },
+    {
+        "change":  "build-execution-fixture-mvp",
+        "archived":  false,
+        "completed_tasks":  0,
+        "total_tasks":  12,
+        "implementation_status":  "planned",
+        "task_file":  "openspec/changes/build-execution-fixture-mvp/tasks.md"
+    },
+    {
+        "change":  "connect-market-replay-and-calibration",
+        "archived":  false,
+        "completed_tasks":  0,
+        "total_tasks":  9,
+        "implementation_status":  "planned",
+        "task_file":  "openspec/changes/connect-market-replay-and-calibration/tasks.md"
+    },
+    {
+        "change":  "run-teacher-distillation",
+        "archived":  false,
+        "completed_tasks":  0,
+        "total_tasks":  8,
+        "implementation_status":  "planned",
+        "task_file":  "openspec/changes/run-teacher-distillation/tasks.md"
+    }
+]

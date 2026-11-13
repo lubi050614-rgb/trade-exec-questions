@@ -1,0 +1,127 @@
+{
+    "validated_at":  "2026-11-13",
+    "cli_version":  "2.0.0",
+    "active_and_specs":  {
+                             "items":  [
+                                           {
+                                               "id":  "add-special-asset-fixtures",
+                                               "type":  "change",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  37
+                                           },
+                                           {
+                                               "id":  "build-execution-fixture-mvp",
+                                               "type":  "change",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  41
+                                           },
+                                           {
+                                               "id":  "connect-market-replay-and-calibration",
+                                               "type":  "change",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  42
+                                           },
+                                           {
+                                               "id":  "data-gap-registry",
+                                               "type":  "spec",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  5
+                                           },
+                                           {
+                                               "id":  "question-bank",
+                                               "type":  "spec",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  0
+                                           },
+                                           {
+                                               "id":  "run-teacher-distillation",
+                                               "type":  "change",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  40
+                                           },
+                                           {
+                                               "id":  "task-progress",
+                                               "type":  "spec",
+                                               "valid":  true,
+                                               "issues":  [
+
+                                                          ],
+                                               "durationMs":  1
+                                           }
+                                       ],
+                             "summary":  {
+                                             "totals":  {
+                                                            "items":  7,
+                                                            "passed":  7,
+                                                            "failed":  0
+                                                        },
+                                             "byType":  {
+                                                            "change":  {
+                                                                           "items":  4,
+                                                                           "passed":  4,
+                                                                           "failed":  0
+                                                                       },
+                                                            "spec":  {
+                                                                         "items":  3,
+                                                                         "passed":  3,
+                                                                         "failed":  0
+                                                                     }
+                                                        }
+                                         },
+                             "version":  "1.0",
+                             "root":  {
+                                          "path":  "D:\\Project\\trade-exec-questions",
+                                          "source":  "nearest"
+                                      }
+                         },
+    "archived":  {
+                     "items":  [
+                                   {
+                                       "id":  "2026-11-13-govern-data-gaps-and-question-bank",
+                                       "type":  "change",
+                                       "valid":  true,
+                                       "issues":  [
+
+                                                  ],
+                                       "durationMs":  10
+                                   }
+                               ],
+                     "summary":  {
+                                     "totals":  {
+                                                    "items":  1,
+                                                    "passed":  1,
+                                                    "failed":  0
+                                                },
+                                     "byType":  {
+                                                    "change":  {
+                                                                   "items":  1,
+                                                                   "passed":  1,
+                                                                   "failed":  0
+                                                               }
+                                                }
+                                 },
+                     "version":  "1.0",
+                     "root":  {
+                                  "path":  "D:\\Project\\trade-exec-questions",
+                                  "source":  "nearest"
+                              }
+                 }
+}
