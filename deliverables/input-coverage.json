@@ -2,7 +2,10 @@
     "questions":  1150,
     "nodes":  115,
     "synthetic_baseline_ready":  1150,
-    "exact_node_fault_ready":  0,
+    "exact_node_fault_ready":  1150,
+    "precise_question_cases":  1150,
+    "precise_node_variants":  575,
+    "precise_validation_result":  "passed",
     "actual_n_symbols":  200,
     "actual_n_days":  5,
     "public_data_files":  48,
@@ -12,5 +15,7 @@
     "real_calibration_ready":  false,
     "manifest_sha256":  "e2435ae15bdb574e2adaead4a84964552e9a48f0ad51a8025e5a93ea43eb7d8a",
     "scope":  "questions_and_inputs_only",
-    "limitations":  "Every question has concrete shared baseline and a small-case input; exact reproduction of every node-specific fault and real-source validation remain separate tasks."
+    "case_manifest_sha256":  "6d39c9e3029d5e4d15dc381b8a8e04792922a0a7484e91bd1782053f0b92c597",
+    "precise_validation_sha256":  "442ad1b57557a9c1dfc5525db86000122ea09d032753e21a1809cb28b149f17e",
+    "limitations":  "Explicit per-question synthetic inputs and node fault probes validated; real-source replay, official semantics and hardware evidence remain unavailable."
 }

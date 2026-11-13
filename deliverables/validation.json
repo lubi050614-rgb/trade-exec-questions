@@ -10,7 +10,7 @@
     "negative_cases_rejected":  4,
     "database_connected":  false,
     "shared_input_generator_implemented":  true,
-    "exact_node_fault_implemented":  false,
+    "exact_node_fault_implemented":  true,
     "teacher_answers_generated":  0,
     "result":  "passed"
 }

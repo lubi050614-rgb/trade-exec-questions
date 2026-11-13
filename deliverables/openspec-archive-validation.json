@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "id": "2026-11-13-add-special-asset-fixtures",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 9
+    },
+    {
+      "id": "2026-11-13-build-execution-fixture-mvp",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 1
+    },
+    {
+      "id": "2026-11-13-deliver-question-input-packs",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    },
+    {
+      "id": "2026-11-13-focus-input-data-scope",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 4
+    },
+    {
+      "id": "2026-11-13-govern-data-gaps-and-question-bank",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 1
+    },
+    {
+      "id": "2026-11-13-refine-node-specific-inputs",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 1
+    }
+  ],
+  "summary": {
+    "totals": {
+      "items": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "byType": {
+      "change": {
+        "items": 6,
+        "passed": 6,
+        "failed": 0
+      }
+    }
+  },
+  "version": "1.0",
+  "root": {
+    "path": "D:\\Project\\trade-exec-questions",
+    "source": "nearest"
+  }
+}

@@ -1,10 +1,11 @@
 {
     "result":  "passed",
     "independent_generation_processes":  2,
-    "file_hashes_matched":  168,
+    "file_hashes_matched":  1780,
     "public_data_files":  48,
     "question_bindings":  1150,
-    "node_cases":  115,
+    "node_cases":  575,
+    "question_cases":  1150,
     "actual_n_symbols":  200,
     "actual_n_days":  5,
     "answers_generated":  0,

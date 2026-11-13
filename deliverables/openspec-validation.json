@@ -1,181 +1,91 @@
 {
-    "validated_at":  "2026-11-13",
-    "cli_version":  "2.0.0",
-    "active_and_specs":  {
-                             "items":  [
-                                           {
-                                               "id":  "connect-market-replay-and-calibration",
-                                               "type":  "change",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  30
-                                           },
-                                           {
-                                               "id":  "data-gap-registry",
-                                               "type":  "spec",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  4
-                                           },
-                                           {
-                                               "id":  "execution-fixtures",
-                                               "type":  "spec",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  1
-                                           },
-                                           {
-                                               "id":  "question-bank",
-                                               "type":  "spec",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  0
-                                           },
-                                           {
-                                               "id":  "question-inputs",
-                                               "type":  "spec",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  1
-                                           },
-                                           {
-                                               "id":  "refine-node-specific-inputs",
-                                               "type":  "change",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  33
-                                           },
-                                           {
-                                               "id":  "run-teacher-distillation",
-                                               "type":  "change",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  32
-                                           },
-                                           {
-                                               "id":  "special-asset-fixtures",
-                                               "type":  "spec",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  1
-                                           },
-                                           {
-                                               "id":  "task-progress",
-                                               "type":  "spec",
-                                               "valid":  true,
-                                               "issues":  [
-
-                                                          ],
-                                               "durationMs":  0
-                                           }
-                                       ],
-                             "summary":  {
-                                             "totals":  {
-                                                            "items":  9,
-                                                            "passed":  9,
-                                                            "failed":  0
-                                                        },
-                                             "byType":  {
-                                                            "change":  {
-                                                                           "items":  3,
-                                                                           "passed":  3,
-                                                                           "failed":  0
-                                                                       },
-                                                            "spec":  {
-                                                                         "items":  6,
-                                                                         "passed":  6,
-                                                                         "failed":  0
-                                                                     }
-                                                        }
-                                         },
-                             "version":  "1.0",
-                             "root":  {
-                                          "path":  "D:\\Project\\trade-exec-questions",
-                                          "source":  "nearest"
-                                      }
-                         },
-    "archived":  {
-                     "items":  [
-                                   {
-                                       "id":  "2026-11-13-add-special-asset-fixtures",
-                                       "type":  "change",
-                                       "valid":  true,
-                                       "issues":  [
-
-                                                  ],
-                                       "durationMs":  9
-                                   },
-                                   {
-                                       "id":  "2026-11-13-build-execution-fixture-mvp",
-                                       "type":  "change",
-                                       "valid":  true,
-                                       "issues":  [
-
-                                                  ],
-                                       "durationMs":  1
-                                   },
-                                   {
-                                       "id":  "2026-11-13-deliver-question-input-packs",
-                                       "type":  "change",
-                                       "valid":  true,
-                                       "issues":  [
-
-                                                  ],
-                                       "durationMs":  0
-                                   },
-                                   {
-                                       "id":  "2026-11-13-focus-input-data-scope",
-                                       "type":  "change",
-                                       "valid":  true,
-                                       "issues":  [
-
-                                                  ],
-                                       "durationMs":  4
-                                   },
-                                   {
-                                       "id":  "2026-11-13-govern-data-gaps-and-question-bank",
-                                       "type":  "change",
-                                       "valid":  true,
-                                       "issues":  [
-
-                                                  ],
-                                       "durationMs":  1
-                                   }
-                               ],
-                     "summary":  {
-                                     "totals":  {
-                                                    "items":  5,
-                                                    "passed":  5,
-                                                    "failed":  0
-                                                },
-                                     "byType":  {
-                                                    "change":  {
-                                                                   "items":  5,
-                                                                   "passed":  5,
-                                                                   "failed":  0
-                                                               }
-                                                }
-                                 },
-                     "version":  "1.0",
-                     "root":  {
-                                  "path":  "D:\\Project\\trade-exec-questions",
-                                  "source":  "nearest"
-                              }
-                 }
+  "items": [
+    {
+      "id": "connect-market-replay-and-calibration",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 33
+    },
+    {
+      "id": "data-gap-registry",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 5
+    },
+    {
+      "id": "execution-fixtures",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 1
+    },
+    {
+      "id": "node-specific-inputs",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    },
+    {
+      "id": "question-bank",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    },
+    {
+      "id": "question-inputs",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 1
+    },
+    {
+      "id": "run-teacher-distillation",
+      "type": "change",
+      "valid": true,
+      "issues": [],
+      "durationMs": 34
+    },
+    {
+      "id": "special-asset-fixtures",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    },
+    {
+      "id": "task-progress",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    }
+  ],
+  "summary": {
+    "totals": {
+      "items": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    "byType": {
+      "change": {
+        "items": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "spec": {
+        "items": 7,
+        "passed": 7,
+        "failed": 0
+      }
+    }
+  },
+  "version": "1.0",
+  "root": {
+    "path": "D:\\Project\\trade-exec-questions",
+    "source": "nearest"
+  }
 }

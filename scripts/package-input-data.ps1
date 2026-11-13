@@ -8,7 +8,11 @@ $dataRoot=[System.IO.Path]::GetFullPath($DataDirectory).TrimEnd('\','/')
 $manifest=Get-Content -Raw -Encoding UTF8 (Join-Path $dataRoot 'manifest.json') | ConvertFrom-Json
 $validation=Get-Content -Raw -Encoding UTF8 (Join-Path $dataRoot 'validation.json') | ConvertFrom-Json
 if($validation.result -ne 'passed'){throw 'Input dataset must pass validation before packaging'}
-$paths=@($manifest.files.path)+@('manifest.json','config.json','README.md','validation.json','question-inputs.jsonl')+@(Get-ChildItem -LiteralPath (Join-Path $dataRoot 'cases') -Filter '*.json' | ForEach-Object {'cases/'+$_.Name})
+$catalog=Get-Content -Raw -Encoding UTF8 (Join-Path $dataRoot 'case-manifest.json') | ConvertFrom-Json
+$precise=Get-Content -Raw -Encoding UTF8 (Join-Path $dataRoot 'precise-validation.json') | ConvertFrom-Json
+if($precise.result -ne 'passed' -or $precise.case_manifest_sha256 -ne (Get-FileHash -LiteralPath (Join-Path $dataRoot 'case-manifest.json') -Algorithm SHA256).Hash.ToLowerInvariant()){throw 'Precise cases must pass validation before packaging'}
+foreach($file in $catalog.files){if($file.path -notmatch '^cases/(nodes/P\d{2}-S\d{2}/[a-z_]+|questions/P\d{2}-S\d{2}-Q\d{2})\.json$' -or (Get-FileHash -LiteralPath (Join-Path $dataRoot $file.path) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $file.sha256){throw 'Invalid or stale precise case catalog'}}
+$paths=@($manifest.files.path)+@('manifest.json','config.json','README.md','validation.json','question-inputs.jsonl','case-manifest.json','precise-validation.json')+@($catalog.files.path)
 $stream=New-Object System.IO.FileStream([System.IO.Path]::GetFullPath($ArchivePath),[System.IO.FileMode]::Create)
 $zip=New-Object System.IO.Compression.ZipArchive($stream,[System.IO.Compression.ZipArchiveMode]::Create)
 try{

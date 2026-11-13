@@ -60,7 +60,7 @@ $csv = New-Object System.Collections.Generic.List[object]
 $md = New-Object System.Text.StringBuilder
 [void]$md.AppendLine('# 交易执行衍生题库：13管线 / 115节点 / 每节点10题')
 [void]$md.AppendLine('')
-[void]$md.AppendLine('v3（2026-11-13）：以原节点ID为主键，保留1150题。当前只交付题目＋对应输入，不生成答案。逐题实际输入文件见题目与数据输入.jsonl和题目输入索引.csv；共享合成输入可用不等于真实数据或每个节点精确故障已就绪。Q01—Q05为具体技术题，Q06—Q10分别绑定数据契约、不变量、故障、独立验收与证据边界。')
+[void]$md.AppendLine('v3（2026-11-13）：以原节点ID为主键，保留1150题。当前只交付题目＋对应输入，不生成答案。逐题实际输入文件见题目与数据输入.jsonl和题目输入索引.csv；逐题专用案例和节点精确故障状态以独立校验为准；合成输入不等于真实数据。Q01—Q05为具体技术题，Q06—Q10分别绑定数据契约、不变量、故障、独立验收与证据边界。')
 [void]$md.AppendLine('')
 [void]$md.AppendLine('## 全局作答契约')
 [void]$md.AppendLine($contract)
@@ -95,7 +95,7 @@ foreach ($p in $tree.pipelines) {
             $record.split='unassigned'
             $record.required_answer_artifacts=@('answer.json','minimal_case','acceptance_assertions','evidence_boundary')
             $jsonl.Add(($record | ConvertTo-Json -Depth 10 -Compress))
-            $csv.Add([pscustomobject]@{question_id=$qid;pipeline_name=$p.name;node_name=$s.name;node_id=$s._id;question_type=$kinds[$qi];question=$questions[$qi];related_tables=($pf.tables -join ';');missing_data_ids=($pf.gaps -join ';');training_priority=$nodeContract.training_priority;synthetic_input_ready=$syntheticInputReady;data_ready=$false;exact_node_fault_implemented=$false;acceptance_invariant=$nodeContract.acceptance_invariant;failure_scenario=$nodeContract.failure_scenario;independent_oracle=$nodeContract.independent_oracle;task_refs=($nodeContract.task_refs -join ';');split_group_id=$key;evidence_track=$pf.track})
+            $csv.Add([pscustomobject]@{question_id=$qid;pipeline_name=$p.name;node_name=$s.name;node_id=$s._id;question_type=$kinds[$qi];question=$questions[$qi];related_tables=($pf.tables -join ';');missing_data_ids=($pf.gaps -join ';');training_priority=$nodeContract.training_priority;synthetic_input_ready=$syntheticInputReady;data_ready=$false;exact_node_fault_implemented=$preciseInputReady;acceptance_invariant=$nodeContract.acceptance_invariant;failure_scenario=$nodeContract.failure_scenario;independent_oracle=$nodeContract.independent_oracle;task_refs=($nodeContract.task_refs -join ';');split_group_id=$key;evidence_track=$pf.track})
             [void]$md.AppendLine("$($qi+1). **$qid** $($questions[$qi])")
             [void]$md.AppendLine('')
         }
@@ -111,7 +111,7 @@ $inventory = foreach ($g in ($columns | Group-Object table_name)) {
 }
 $inventory | Export-Csv -NoTypeInformation -Encoding UTF8 (Join-Path $out '已提供字段表清单.csv')
 $pipelineCounts = foreach ($p in $tree.pipelines) { [pscustomobject]@{pipeline=$p.name;nodes=@($p.scripts).Count;questions=(@($p.scripts).Count*10)} }
-$stats=[ordered]@{schema_version='2.0';source='quant-tree-workspace-20261112-1800.json';date='2026-11-13';pipelines=@($tree.pipelines).Count;nodes=$nodeCount;questions=$jsonl.Count;specific_questions=575;cross_cutting_questions=575;node_contracts=$nodeContracts.Count;design_ready_questions=$jsonl.Count;synthetic_input_ready_questions=$(if($syntheticInputReady){1150}else{0});exact_node_fault_ready_questions=0;dataset_ready_questions=0;teacher_answers_generated=0;tables_in_columns=@($inventory).Count;tables_in_observed=@($observed.PSObject.Properties).Count;schema_issues=@($schemaAudit);pipeline_counts=@($pipelineCounts);validation='question contracts validated; synthetic baseline evidence is separate in input-validation/input-coverage; no real database or teacher inference'}
+$stats=[ordered]@{schema_version='2.0';source='quant-tree-workspace-20261112-1800.json';date='2026-11-13';pipelines=@($tree.pipelines).Count;nodes=$nodeCount;questions=$jsonl.Count;specific_questions=575;cross_cutting_questions=575;node_contracts=$nodeContracts.Count;design_ready_questions=$jsonl.Count;synthetic_input_ready_questions=$(if($syntheticInputReady){1150}else{0});exact_node_fault_ready_questions=$(if($preciseInputReady){1150}else{0});dataset_ready_questions=0;teacher_answers_generated=0;tables_in_columns=@($inventory).Count;tables_in_observed=@($observed.PSObject.Properties).Count;schema_issues=@($schemaAudit);pipeline_counts=@($pipelineCounts);validation='question contracts validated; synthetic baseline evidence is separate in input-validation/input-coverage; no real database or teacher inference'}
 Export-ExecutionContracts
 [System.IO.File]::WriteAllText((Join-Path $out 'coverage.json'),($stats | ConvertTo-Json -Depth 8),$utf8)
 $stats | ConvertTo-Json -Depth 6

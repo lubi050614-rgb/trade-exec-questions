@@ -15,5 +15,7 @@ Run-Stage 'build-deliverables.ps1' @()
 Run-Stage 'scripts/bind-question-inputs.ps1' @()
 Run-Stage 'scripts/validate-question-bank.ps1' @('-SelfTest')
 Run-Stage 'scripts/test-question-inputs.ps1' @()
+Run-Stage 'scripts/write-precise-input-report.ps1' @()
 Run-Stage 'scripts/package-input-data.ps1' @()
+Run-Stage 'scripts/test-input-archive.ps1' @('-VerifyRepack')
 Write-Output 'Question/input package built. No teacher calls, answers, or real-market claims.'

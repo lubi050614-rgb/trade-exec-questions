@@ -2,7 +2,7 @@
 
 面向量化交易执行知识蒸馏的题库与实验设计：13 个管线、115 个技术节点，每节点 10 题，共 1,150 题。
 
-当前v3只交付**题目＋对应输入数据，不生成答案**。已实现共享合成输入生成器、200个SYN标的5日基础数据和1150题输入索引。真实行情、真实柜台与硬件证据仍待提供；每个节点的精确故障覆盖与基础输入可用分开记录。
+当前只交付**题目＋对应输入数据，不生成答案**。1150题各有独立案例，前五题共575个专用实验；115节点各有正常、故障、恢复证据、缺证、中性表达5类场景。共享背景为200个SYN标的5日。真实行情、真实柜台与硬件证据仍待提供。
 
 ## 主要文件
 
@@ -16,6 +16,7 @@
 - [覆盖统计](deliverables/coverage.json)及[验证结果](deliverables/验证结果.txt)。
 - [数据缺口登记](deliverables/数据缺口登记表.md)及[CSV](deliverables/数据缺口登记表.csv)：12类缺口的字段、真实/合成方案、角色、验收和任务。
 - [节点数据契约](deliverables/节点数据契约.csv)：115节点的精确依赖、不变量、故障和独立oracle。
+- [逐题精准适配说明](deliverables/逐题精准适配说明.md)、[逐题覆盖](deliverables/逐题适配覆盖.csv)、[节点场景覆盖](deliverables/逐节点场景覆盖.csv)：专用输入来源、五题样本及逐项校验证据。
 - [目标与路线图](openspec/ROADMAP.md)、[任务进度](deliverables/任务进度.md)和[就绪状态](deliverables/题库就绪度.md)。
 
 `execution-source.json` 保存交易执行分支的原始节点；`question-seeds.txt` 保存逐节点具体问题；`build-deliverables.ps1` 用于生成题库。
@@ -52,7 +53,7 @@ Q01—Q05 为逐节点具体技术题；Q06—Q10 为绑定节点上下文的数
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-openspec.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 list
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 instructions apply --change refine-node-specific-inputs --json
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 list --specs
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 validate --all --strict
 ```
 

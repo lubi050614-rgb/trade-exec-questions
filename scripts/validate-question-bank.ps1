@@ -38,12 +38,17 @@ function Test-QuestionRecord($r) {
     Assert-Check ($r.question_id -match '^P\d{2}-S\d{2}-Q\d{2}$') 'Invalid question ID'
     Assert-Check ($r.default_status -eq 'design_only' -and $null -eq $r.answer) 'Unverified answer/status'
     Assert-Check ($r.readiness.design_ready -eq $true) 'Design readiness missing'
-    foreach($field in @('dataset_ready','real_calibration_ready','exact_node_fault_implemented')) { Assert-Check ($r.readiness.$field -eq $false) "False readiness claim: $field" }
+    foreach($field in @('dataset_ready','real_calibration_ready')) { Assert-Check ($r.readiness.$field -eq $false) "False readiness claim: $field" }
     if($r.readiness.generator_implemented -eq $true){
         $evidencePath=$InputCoveragePath
         Assert-Check (Test-Path -LiteralPath $evidencePath) 'Missing input generator evidence'
         $evidence=Get-Content -Raw -Encoding UTF8 -LiteralPath $evidencePath | ConvertFrom-Json
-        Assert-Check ($evidence.input_validation_result -eq 'passed' -and $r.readiness.generator_scope -eq 'shared_synthetic_inputs_only') 'Unverified generator scope'
+        Assert-Check ($evidence.input_validation_result -eq 'passed' -and $r.readiness.generator_scope -in @('shared_synthetic_inputs_only','shared_and_question_specific_synthetic_inputs')) 'Unverified generator scope'
+    }
+    if($r.readiness.exact_node_fault_implemented){
+        Assert-Check ($evidence.exact_node_fault_ready -eq 1150 -and $evidence.precise_validation_result -eq 'passed') 'Missing precise input evidence'
+        $precisePath=Join-Path (Split-Path $InputCoveragePath -Parent) 'precise-input-validation.json'
+        Assert-Check ((Get-FileHash -LiteralPath $precisePath -Algorithm SHA256).Hash.ToLowerInvariant() -eq $evidence.precise_validation_sha256) 'Stale precise validation report'
     }
     Assert-Check ($r.universe_target -eq 200 -and $r.evaluation_trading_days -eq 5) 'Experiment target mismatch'
     Assert-Check ($r.family_id -eq $r.split_group_id -and $r.split -eq 'unassigned') 'Unsafe split assignment'
@@ -106,9 +111,9 @@ if($SelfTest) {
         $negativeCount++
     }
 }
-$result=[ordered]@{schema_version='2.0';validated_at='2026-11-13';questions=$records.Count;nodes=$contracts.Count;gaps=$gapIndex.Count;task_references='resolved';real_fields='schema_checked';csv_jsonl='matched';negative_cases_rejected=$negativeCount;database_connected=$false;shared_input_generator_implemented=($records[0].readiness.generator_implemented -eq $true);exact_node_fault_implemented=$false;teacher_answers_generated=0;result='passed'}
+$result=[ordered]@{schema_version='2.0';validated_at='2026-11-13';questions=$records.Count;nodes=$contracts.Count;gaps=$gapIndex.Count;task_references='resolved';real_fields='schema_checked';csv_jsonl='matched';negative_cases_rejected=$negativeCount;database_connected=$false;shared_input_generator_implemented=($records[0].readiness.generator_implemented -eq $true);exact_node_fault_implemented=($records[0].readiness.exact_node_fault_implemented -eq $true);teacher_answers_generated=0;result='passed'}
 $utf8=New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $OutputDirectory 'validation.json'),($result | ConvertTo-Json -Depth 5),$utf8)
-$lines=@('验证日期：2026-11-13','通过：13管线115节点，各10题，共1150个稳定唯一ID。','通过：CSV/JSONL题面一致，115节点契约匹配。','通过：真实表/最低字段与仓库schema一致，12类缺口和任务编号全部可追溯。','通过：题面与输入/故障/证据边界可追踪；共享合成输入状态单独检查。',"负例拒绝数量：$negativeCount。",'限制：未连接ClickHouse、未运行真实重放/硬件测试；输入生成不等于每个节点精确故障实现；未生成题目答案。')
+$lines=@('验证日期：2026-11-13','通过：13管线115节点，各10题，共1150个稳定唯一ID。','通过：CSV/JSONL题面一致，115节点契约匹配。','通过：真实表/最低字段与仓库schema一致，12类缺口和任务编号全部可追溯。','通过：题面与输入/故障/证据边界可追踪；共享合成输入状态单独检查。',"负例拒绝数量：$negativeCount。",'限制：未连接ClickHouse、未运行真实重放/硬件测试；逐题专用合成输入及精确故障由独立报告验证；未生成题目答案。')
 [System.IO.File]::WriteAllLines((Join-Path $OutputDirectory '验证结果.txt'),$lines,$utf8)
 $result | ConvertTo-Json

@@ -6,27 +6,27 @@
     "files":  [
                   {
                       "file":  "coverage.json",
-                      "sha256":  "395E3106636A2A4E6ABC9D3BDEDA9184EE9007C2165C0323C761F44BD6F3B21B",
+                      "sha256":  "BC43520621940236AE0222C2FB690EF9DA0C7154CC5F47D1D62268C54B5EA3CD",
                       "matched":  true
                   },
                   {
                       "file":  "validation.json",
-                      "sha256":  "9B2056A7856E9220873CE09FB9491FE190FCA8C5AC9860618E81D78DCF9FA8B2",
+                      "sha256":  "0B77B1E96C3260F645715C6A2DDF8E9EFC50AD7E477BAF8727F74003DDEA850F",
                       "matched":  true
                   },
                   {
                       "file":  "交易执行_1150题.csv",
-                      "sha256":  "344DCE5D164B8DB1DA09505CC385874E4CB29DA4BF754C8B8A899FF17CA332BC",
+                      "sha256":  "080A10A353A4C5F4A8F9FFE69230568BDBCDAF7E5C7D8B6B03287000BBFFAE98",
                       "matched":  true
                   },
                   {
                       "file":  "交易执行_1150题.md",
-                      "sha256":  "42C6E681674DF3561DC0E85B127DC5A70AE98E131D27B479493E70523CFD8361",
+                      "sha256":  "56AB5368B314AA237E91A27FBD3055B9DAA5F05577D286A23C9F2A1895B3E03F",
                       "matched":  true
                   },
                   {
                       "file":  "交易执行_教师输入.jsonl",
-                      "sha256":  "45F07974CD65B6A9B8326E08438461C5A7878430CC20FCA31358D4915E65851A",
+                      "sha256":  "F0433EF04F67A3FD39F3AEE58C4A9704BAB972440A63EF75257D5947E4591126",
                       "matched":  true
                   },
                   {
@@ -36,12 +36,12 @@
                   },
                   {
                       "file":  "节点数据契约.csv",
-                      "sha256":  "80245E69FC2A0CE5EF646480C8CF39431B692F4582E41093130966C8405834C8",
+                      "sha256":  "25E172E34F7B3FA102D536A05003AA95FFA8563470B6537F15F68C9339A3777B",
                       "matched":  true
                   },
                   {
                       "file":  "节点数据契约.json",
-                      "sha256":  "814953BAB87577FBDC594D9C0525864C9872109683829D7CD8EE25A5E2196B9B",
+                      "sha256":  "83D9C501BE8150EA9F36EC2C204715F25ECFEB9F95D86DD012C37BAC0452A333",
                       "matched":  true
                   },
                   {
@@ -56,12 +56,12 @@
                   },
                   {
                       "file":  "题库就绪度.md",
-                      "sha256":  "A4757B1C57A21BD8F2F1A672674730C4E324ED2C93C26D8F2FA756B6483A0F8D",
+                      "sha256":  "75A964461483C11E298C819230BC6F40D2C1F05BD5A79529B1AA1599423E5177",
                       "matched":  true
                   },
                   {
                       "file":  "验证结果.txt",
-                      "sha256":  "2DB90BD2DA07C9F6CC47F4D19C92700FB622823DC8C326B6EA6B5A160BEAC192",
+                      "sha256":  "474D6E8F26773871B1FB989AEB43940F1BBC544B5522DFE196FF81349F65B87D",
                       "matched":  true
                   },
                   {

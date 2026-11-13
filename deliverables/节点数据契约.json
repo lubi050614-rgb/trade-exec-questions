@@ -53,6 +53,7 @@
         "independent_oracle":  "1000目标减300已成减200活动得到可派500股",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -65,8 +66,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -123,6 +124,7 @@
         "independent_oracle":  "固定Q和容量上限逐股手算可行量与残量",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3"
@@ -132,8 +134,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -171,6 +173,7 @@
         "independent_oracle":  "用前日三段量1比2比1得到0.25/0.5/0.25",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1"
                       ],
         "readiness":  {
@@ -178,8 +181,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -218,6 +221,7 @@
         "independent_oracle":  "整数余数分配独立实现核对总量和时间合法性",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3"
@@ -227,8 +231,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -276,6 +280,7 @@
         "independent_oracle":  "手算目标累计减实际累计，并独立扣除在途量",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -285,8 +290,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -340,6 +345,7 @@
         "independent_oracle":  "市场量900自身100时分别核对排除/包含自身的参与率",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -353,8 +359,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -414,6 +420,7 @@
         "independent_oracle":  "边界上下一个tick与完整撤改事件表逐条比对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -427,8 +434,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -467,6 +474,7 @@
         "independent_oracle":  "单单1000股成交400撤600的状态转移真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -477,8 +485,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -526,6 +534,7 @@
         "independent_oracle":  "枚举切换前后活动单并独立求和核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -535,8 +544,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -590,6 +599,7 @@
         "independent_oracle":  "指定test_only阶段表和残量处置真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -602,8 +612,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -630,6 +640,7 @@
         "independent_oracle":  "比较代码/输入/规则/参数哈希和逐事件输出",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.1",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -639,8 +650,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -728,15 +739,16 @@
         "failure_scenario":  "跨channel按seq全局排序导致错误重建",
         "independent_oracle":  "小订单簿独立重建并与checkpoint逐档核对",
         "task_refs":  [
-                          "connect-market-replay-and-calibration/1.1"
+                          "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2"
                       ],
         "readiness":  {
                           "design_ready":  true,
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -798,6 +810,7 @@
         "independent_oracle":  "已知Y生成样本仅验参数恢复，另查识别假设",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -809,8 +822,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -855,6 +868,7 @@
         "independent_oracle":  "小离散网格穷举成本与数值解比较",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -866,8 +880,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -915,6 +929,7 @@
         "independent_oracle":  "两组参数产生同轨迹的反例及簇级重采样对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -926,8 +941,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -965,6 +980,7 @@
         "independent_oracle":  "固定分钟收益序列手算RV并检查特征可用时间",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1"
                       ],
         "readiness":  {
@@ -972,8 +988,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1031,6 +1047,7 @@
         "independent_oracle":  "容量为零时完成量必须为零的边界断言",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -1042,8 +1059,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1123,6 +1140,7 @@
         "independent_oracle":  "全量目标IS恒等式和保守队列敏感性对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1136,8 +1154,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1164,6 +1182,7 @@
         "independent_oracle":  "逐单版本清单与发布事件独立关联",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -1173,8 +1192,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1224,6 +1243,7 @@
         "independent_oracle":  "人为注入仅数据故障与仅参数漂移的成对样本",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.2",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1235,8 +1255,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1288,6 +1308,7 @@
         "independent_oracle":  "逐事件可知时间表手工as-of联接",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -1297,8 +1318,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1348,6 +1369,7 @@
         "independent_oracle":  "前向最近已知与双向最近邻的泄漏对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1358,8 +1380,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1416,6 +1438,7 @@
         "independent_oracle":  "两笔交易价量手算VWAP及买卖滑点",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -1425,8 +1448,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1476,6 +1499,7 @@
         "independent_oracle":  "目标1000只成600的现金和机会成本恒等式",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1490,8 +1514,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1535,6 +1559,7 @@
         "independent_oracle":  "两桶两算法的固定成本表独立加权",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -1544,8 +1569,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1572,6 +1597,7 @@
         "independent_oracle":  "簇索引审计及小样本置换穷举对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -1581,8 +1607,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1610,6 +1636,7 @@
         "independent_oracle":  "独立group-by核对每项汇总与缺失计数",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1620,8 +1647,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1669,6 +1696,7 @@
         "independent_oracle":  "冻结对照参数和目标的配对指标表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.3",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -1678,8 +1706,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1714,6 +1742,7 @@
         "independent_oracle":  "正式能力矩阵与只读探测结果交叉核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/3.2",
                           "add-special-asset-fixtures/1.1"
@@ -1723,8 +1752,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1753,6 +1782,7 @@
         "independent_oracle":  "假柜台受理日志与客户端请求去重表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1765,8 +1795,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1794,6 +1824,7 @@
         "independent_oracle":  "相同逻辑任务ID的副作用计数必须为1",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1805,8 +1836,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1835,6 +1866,7 @@
         "independent_oracle":  "账户加会话加订单标识的独立路由表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1847,8 +1879,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1877,6 +1909,7 @@
         "independent_oracle":  "假对端实际受理数和令牌消费逐请求对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1889,8 +1922,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -1950,6 +1983,7 @@
         "independent_oracle":  "独立资金预算与策略分配决策表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -1962,8 +1996,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2020,6 +2054,7 @@
         "independent_oracle":  "规则边界两侧一个tick的允许/拒绝表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3"
                       ],
@@ -2028,8 +2063,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2080,6 +2115,7 @@
         "independent_oracle":  "预检依赖快照指纹与结果真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -2093,8 +2129,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2144,6 +2180,7 @@
         "independent_oracle":  "固定故障时间表与告警覆盖矩阵",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2156,8 +2193,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2186,6 +2223,7 @@
         "independent_oracle":  "物理事件真值与交付日志分离后的最终账本",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2198,8 +2236,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2233,6 +2271,7 @@
         "independent_oracle":  "独立结算分录与快照差异表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2243,8 +2282,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2303,6 +2342,7 @@
         "independent_oracle":  "全母单含未成腿的成本分布核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2315,8 +2355,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2345,6 +2385,7 @@
         "independent_oracle":  "领导权租约和柜台活动单清单独立核验",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.4",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2357,8 +2398,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2384,6 +2425,7 @@
         "independent_oracle":  "固定工具链哈希和真实硬件同负载基准",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "connect-market-replay-and-calibration/3.2"
                       ],
         "readiness":  {
@@ -2391,8 +2433,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2459,6 +2501,7 @@
         "independent_oracle":  "已知包序列/丢包表与解码事件逐个比对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/3.2",
                           "add-special-asset-fixtures/1.1",
                           "connect-market-replay-and-calibration/3.2"
@@ -2468,8 +2511,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2558,6 +2601,7 @@
         "independent_oracle":  "参考小簿与checkpoint逐档对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/3.2",
                           "add-special-asset-fixtures/1.1"
                       ],
@@ -2566,8 +2610,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2595,6 +2639,7 @@
         "independent_oracle":  "独立协议解析器及对端受理清单",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/3.2",
@@ -2606,8 +2651,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2634,6 +2679,7 @@
         "independent_oracle":  "带序列计数的参考单线程执行器",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "connect-market-replay-and-calibration/3.2"
@@ -2643,8 +2689,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2685,6 +2731,7 @@
         "independent_oracle":  "串行参考预算与并发后累计受理量比较",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2698,8 +2745,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2727,6 +2774,7 @@
         "independent_oracle":  "已知报文向量和独立软件参考模型",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
                           "build-execution-fixture-mvp/3.2",
@@ -2738,8 +2786,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2765,6 +2813,7 @@
         "independent_oracle":  "已知偏移注入表与硬件同步实测分开验收",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "connect-market-replay-and-calibration/3.2"
                       ],
         "readiness":  {
@@ -2772,8 +2821,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2800,6 +2849,7 @@
         "independent_oracle":  "原pcap哈希、包计数与业务seq交叉核验",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "connect-market-replay-and-calibration/3.2"
@@ -2809,8 +2859,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2836,6 +2886,7 @@
         "independent_oracle":  "冻结负载下外部计时器和系统计数器",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.5",
                           "connect-market-replay-and-calibration/3.2"
                       ],
         "readiness":  {
@@ -2843,8 +2894,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2898,6 +2949,7 @@
         "independent_oracle":  "依赖状态组合枚举与阻断真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -2910,8 +2962,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -2967,6 +3019,7 @@
         "independent_oracle":  "独立逐笔账本加显式估值快照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -2977,8 +3030,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3028,6 +3081,7 @@
         "independent_oracle":  "串行参考风控与并发受理结果核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3040,8 +3094,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3079,6 +3133,7 @@
         "independent_oracle":  "逐分录现金和库存守恒等式",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3"
@@ -3088,8 +3143,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3128,6 +3183,7 @@
         "independent_oracle":  "数量单位错100倍与正常burst的成对案例",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3139,8 +3195,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3169,6 +3225,7 @@
         "independent_oracle":  "确定性事件时间线与最终剩余净风险",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3181,8 +3238,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3235,6 +3292,7 @@
         "independent_oracle":  "故障注入时间表与源状态转换真值",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/3.2",
@@ -3246,8 +3304,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3273,6 +3331,7 @@
         "independent_oracle":  "虚拟通知端点投递日志与升级倒计时",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/3.2",
                           "add-special-asset-fixtures/1.1"
                       ],
@@ -3281,8 +3340,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3322,6 +3381,7 @@
         "independent_oracle":  "原始事件哈希与带不确定区间的参考时间线",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3334,8 +3394,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3364,6 +3424,7 @@
         "independent_oracle":  "fencing令牌记录与柜台实际受理数",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.6",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3376,8 +3437,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3446,6 +3507,7 @@
         "independent_oracle":  "小簿穷举与独立参考撮合器",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3459,8 +3521,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3539,6 +3601,7 @@
         "independent_oracle":  "前方/后方撤单已知的小队列真值",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3550,8 +3613,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3629,6 +3692,7 @@
         "independent_oracle":  "局部偏序参考轨迹与确定性重放哈希",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
                           "connect-market-replay-and-calibration/2.2"
@@ -3638,8 +3702,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3707,6 +3771,7 @@
         "independent_oracle":  "物理事件DAG与交付时间断言",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3718,8 +3783,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3772,6 +3837,7 @@
         "independent_oracle":  "样本来源指纹、配对条件和独立日期清单",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3783,8 +3849,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3837,6 +3903,7 @@
         "independent_oracle":  "冻结母单配对清单与簇级对照统计",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3848,8 +3915,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3899,6 +3966,7 @@
         "independent_oracle":  "test_only规则的合法转移穷举表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/1.2",
@@ -3912,8 +3980,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -3966,6 +4034,7 @@
         "independent_oracle":  "独立发送端计数恒为零和模拟成交标签审计",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -3977,8 +4046,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4006,6 +4075,7 @@
         "independent_oracle":  "更正说明、旧新断言与独立冻结样本",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4017,8 +4087,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4048,6 +4118,7 @@
         "independent_oracle":  "FMEA风险项与证据覆盖矩阵",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.7",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4062,8 +4133,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4121,6 +4192,7 @@
         "independent_oracle":  "原始价约束和独立公司行动分录",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.8",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -4131,8 +4203,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4167,6 +4239,7 @@
         "independent_oracle":  "账户库存分配表及守恒等式",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.8",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3"
@@ -4176,8 +4249,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4225,6 +4298,7 @@
         "independent_oracle":  "握手/订阅/版本三维状态真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.8",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/3.2",
@@ -4235,8 +4309,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4273,6 +4347,7 @@
         "independent_oracle":  "公告可用时间和计划切换事件对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.8",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
                           "connect-market-replay-and-calibration/2.2"
@@ -4282,8 +4357,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4323,6 +4398,7 @@
         "independent_oracle":  "指定竞价规则夹具与受理确认时间表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.8",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4335,8 +4411,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4377,6 +4453,7 @@
         "independent_oracle":  "布尔依赖真值表与版本变更失效检查",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.8",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -4390,8 +4467,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4476,15 +4553,16 @@
         "failure_scenario":  "30分钟特征在窗口中段被读取",
         "independent_oracle":  "原始小盘口手算与window_end可用性断言",
         "task_refs":  [
-                          "connect-market-replay-and-calibration/1.1"
+                          "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.9"
                       ],
         "readiness":  {
                           "design_ready":  true,
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4531,6 +4609,7 @@
         "independent_oracle":  "有效时段索引和逐窗标签手工对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.9",
                           "build-execution-fixture-mvp/2.1"
                       ],
         "readiness":  {
@@ -4538,8 +4617,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4616,6 +4695,7 @@
         "independent_oracle":  "多机制产生同观测的不可识别反例",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.9",
                           "connect-market-replay-and-calibration/2.1",
                           "connect-market-replay-and-calibration/3.1"
                       ],
@@ -4624,8 +4704,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4669,6 +4749,7 @@
         "independent_oracle":  "公告原始发布时间和更正记录对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.9",
                           "connect-market-replay-and-calibration/2.2"
                       ],
         "readiness":  {
@@ -4676,8 +4757,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4725,6 +4806,7 @@
         "independent_oracle":  "信号TTL与风险命令优先级真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.9",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1"
@@ -4734,8 +4816,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4796,6 +4878,7 @@
         "independent_oracle":  "窗口purge索引和完整目标成本独立核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.9",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4807,8 +4890,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4838,6 +4921,7 @@
         "independent_oracle":  "独立合约仓位账本与成交ID计数",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -4852,8 +4936,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4883,6 +4967,7 @@
         "independent_oracle":  "给定已知Greeks的手算线性敞口",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4896,8 +4981,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4927,6 +5012,7 @@
         "independent_oracle":  "两合约不同乘数的净风险手算表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4940,8 +5026,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -4971,6 +5057,7 @@
         "independent_oracle":  "原合约成交量截止时间与仓位分录",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -4984,8 +5071,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5033,6 +5120,7 @@
         "independent_oracle":  "合约点值和篮子名义金额逐项手算",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5044,8 +5132,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5073,6 +5161,7 @@
         "independent_oracle":  "各账户现金和保证金独立账本",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -5083,8 +5172,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5111,6 +5200,7 @@
         "independent_oracle":  "指定节假日日历的阶段转移表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.10",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
                           "add-special-asset-fixtures/2.1"
@@ -5120,8 +5210,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5149,6 +5239,7 @@
         "independent_oracle":  "正式配置和审批版本逐字段核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.11",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -5160,8 +5251,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5189,6 +5280,7 @@
         "independent_oracle":  "账户组活动委托与适用规则范围核查",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.11",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5200,8 +5292,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5228,6 +5320,7 @@
         "independent_oracle":  "原因码分类真值表与实际受理计数",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.11",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/3.2",
@@ -5238,8 +5331,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5267,6 +5360,7 @@
         "independent_oracle":  "原始事件哈希、追加链和外部保全记录",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.11",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5278,8 +5372,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5307,6 +5401,7 @@
         "independent_oracle":  "固定与滑动窗口穷举计数对照",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.11",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/1.2",
@@ -5319,8 +5414,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5348,6 +5443,7 @@
         "independent_oracle":  "材料陈述与原始证据ID逐条核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.11",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5359,8 +5455,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5388,6 +5484,7 @@
         "independent_oracle":  "显式合约乘数和结算分录手算",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -5398,8 +5495,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5428,6 +5525,7 @@
         "independent_oracle":  "每市场能力矩阵与契约对端受理表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5440,8 +5538,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5470,6 +5568,7 @@
         "independent_oracle":  "分项成本和两腿名义风险手算",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5481,8 +5580,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5512,6 +5611,7 @@
         "independent_oracle":  "净风险状态转移与第三所权限余额表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5525,8 +5625,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5554,6 +5654,7 @@
         "independent_oracle":  "链路状态真值与两所余额在途勾稽",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/3.2",
                           "add-special-asset-fixtures/1.1",
@@ -5564,8 +5665,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5593,6 +5694,7 @@
         "independent_oracle":  "独立权重累加器和请求时间表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/3.2",
@@ -5604,8 +5706,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5635,6 +5737,7 @@
         "independent_oracle":  "正式能力版本和活动单快照核对",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5648,8 +5751,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5676,6 +5779,7 @@
         "independent_oracle":  "本地FIX对端会话日志与业务ID计数",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/3.2",
@@ -5686,8 +5790,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5715,6 +5819,7 @@
         "independent_oracle":  "通道主体额度和资金到位时间表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -5725,8 +5830,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5754,6 +5859,7 @@
         "independent_oracle":  "给定维持保证金规则和完整权益手算",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.12",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -5764,8 +5870,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5808,6 +5914,7 @@
         "independent_oracle":  "小篮子原始PCF与独立预期解析表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
                           "add-special-asset-fixtures/2.3"
@@ -5817,8 +5924,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5867,6 +5974,7 @@
         "independent_oracle":  "指定PCF允许/必须/禁止替代真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -5877,8 +5985,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5919,6 +6027,7 @@
         "independent_oracle":  "篮子库存锁定表与受理依赖DAG",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -5932,8 +6041,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -5961,6 +6070,7 @@
         "independent_oracle":  "跨日份额现金退补分录和未决清单",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/2.3",
@@ -5971,8 +6081,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -6000,6 +6110,7 @@
         "independent_oracle":  "白名单来源和确认状态真值表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -6010,8 +6121,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -6039,6 +6150,7 @@
         "independent_oracle":  "双边确认要素及机制适用表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
                           "build-execution-fixture-mvp/1.2",
@@ -6050,8 +6162,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -6086,6 +6198,7 @@
         "independent_oracle":  "明确test_only定价规则边界表",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -6096,8 +6209,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -6133,6 +6246,7 @@
         "independent_oracle":  "股份批次和规则生效日独立台账",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.3",
                           "build-execution-fixture-mvp/1.2",
                           "connect-market-replay-and-calibration/1.3",
@@ -6143,8 +6257,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",
@@ -6195,6 +6309,7 @@
         "independent_oracle":  "逐项成本恒等式和输入来源标签审计",
         "task_refs":  [
                           "connect-market-replay-and-calibration/1.1",
+                          "refine-node-specific-inputs/1.13",
                           "build-execution-fixture-mvp/2.1",
                           "build-execution-fixture-mvp/2.2",
                           "build-execution-fixture-mvp/3.1",
@@ -6209,8 +6324,8 @@
                           "synthetic_input_ready":  true,
                           "dataset_ready":  false,
                           "generator_implemented":  true,
-                          "generator_scope":  "shared_synthetic_inputs_only",
-                          "exact_node_fault_implemented":  false,
+                          "generator_scope":  "shared_and_question_specific_synthetic_inputs",
+                          "exact_node_fault_implemented":  true,
                           "real_calibration_ready":  false
                       },
         "availability_policy":  "event_time与available_at分开；未知接收时间不得由createtime替代",

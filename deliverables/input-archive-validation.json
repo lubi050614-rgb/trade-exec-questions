@@ -1,0 +1,15 @@
+{
+    "result":  "passed",
+    "archive_entries":  1780,
+    "entry_hashes":  "all_matched",
+    "question_cases":  1150,
+    "node_variants":  575,
+    "extracted_reader_samples":  7,
+    "old_generic_cases_included":  0,
+    "private_files_included":  0,
+    "recovery_final_state_leakage":  "blocked",
+    "deterministic_repack":  "matched",
+    "archive_sha256":  "766f3f15fc878e883bb13c65bee89946bda8e01b940d31b50785f9f20e3142fa",
+    "answers_generated":  0,
+    "real_dataset_ready":  false
+}

@@ -35,6 +35,15 @@ if(Test-Path -LiteralPath $inputEvidencePath){
     $syntheticInputReady=$inputEvidence.scope -eq 'questions_and_inputs_only' -and $inputEvidence.input_validation_result -eq 'passed' -and $inputEvidence.synthetic_baseline_ready -eq 1150
 }
 
+$preciseInputReady=$false
+$preciseEvidencePath=Join-Path (Split-Path $InputCoveragePath -Parent) 'precise-input-validation.json'
+if($syntheticInputReady -and $inputEvidence.precise_validation_result -eq 'passed' -and $inputEvidence.exact_node_fault_ready -eq 1150 -and (Test-Path -LiteralPath $preciseEvidencePath)){
+    $preciseEvidence=Get-Content -Raw -Encoding UTF8 $preciseEvidencePath | ConvertFrom-Json
+    $preciseInputReady=$preciseEvidence.result -eq 'passed' -and $preciseEvidence.node_independent_relations_passed -eq 115 -and $preciseEvidence.fault_relations_violated -eq 115 -and $inputEvidence.precise_validation_sha256 -eq (Get-FileHash -LiteralPath $preciseEvidencePath -Algorithm SHA256).Hash.ToLowerInvariant()
+    foreach($source in $preciseEvidence.recipe_hashes.PSObject.Properties){if((Get-FileHash -LiteralPath (Join-Path $root ('config/'+$source.Name)) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $source.Value){$preciseInputReady=$false}}
+}
+$generatorScope=if($preciseInputReady){'shared_and_question_specific_synthetic_inputs'}else{'shared_synthetic_inputs_only'}
+
 function Get-ExecutionNodeContract($key, $scriptNode, $pipeline, $pipelineNumber, $schema) {
     if (-not $nodeDefinitions.ContainsKey($key)) { throw "Missing node contract: $key" }
     $def = $nodeDefinitions[$key]
@@ -50,7 +59,7 @@ function Get-ExecutionNodeContract($key, $scriptNode, $pipeline, $pipelineNumber
         $tables += $table
         $fields[$table]=@($minimalFields[$alias])
     }
-    $taskRefs=@('connect-market-replay-and-calibration/1.1')
+    $taskRefs=@('connect-market-replay-and-calibration/1.1',('refine-node-specific-inputs/1.'+$pipelineNumber))
     foreach ($gapId in $def.gaps) {
         if (-not $gapIndex.ContainsKey($gapId)) { throw "Unknown gap: $gapId" }
         $taskRefs += @($gapIndex[$gapId].task_refs)
@@ -61,7 +70,7 @@ function Get-ExecutionNodeContract($key, $scriptNode, $pipeline, $pipelineNumber
         training_priority=$priority;real_tables=@($tables);minimum_real_fields=$fields;required_gap_ids=@($def.gaps)
         acceptance_invariant=$def.invariant;failure_scenario=$def.failure;independent_oracle=$def.oracle
         task_refs=@($taskRefs | Select-Object -Unique)
-        readiness=[ordered]@{design_ready=$true;synthetic_input_ready=$syntheticInputReady;dataset_ready=$false;generator_implemented=$syntheticInputReady;generator_scope='shared_synthetic_inputs_only';exact_node_fault_implemented=$false;real_calibration_ready=$false}
+        readiness=[ordered]@{design_ready=$true;synthetic_input_ready=$syntheticInputReady;dataset_ready=$false;generator_implemented=$syntheticInputReady;generator_scope=$generatorScope;exact_node_fault_implemented=$preciseInputReady;real_calibration_ready=$false}
         availability_policy='event_time与available_at分开；未知接收时间不得由createtime替代'
         split_group_id=$key
     }
@@ -81,7 +90,7 @@ function Get-ExecutionQuestions($nodeContract, $originalQuestions) {
 function Export-ExecutionContracts {
     if ($nodeDefinitions.Count -ne 115 -or $nodeContracts.Count -ne 115) { throw 'Node contract coverage mismatch' }
     [System.IO.File]::WriteAllText((Join-Path $out '节点数据契约.json'),(ConvertTo-Json -InputObject @($nodeContracts.ToArray()) -Depth 12),$utf8)
-    $nodeContracts | ForEach-Object { [pscustomobject]@{node_key=$_.node_key;node_name=$_.node_name;training_priority=$_.training_priority;required_gap_ids=($_.required_gap_ids -join ';');real_tables=($_.real_tables -join ';');acceptance_invariant=$_.acceptance_invariant;failure_scenario=$_.failure_scenario;independent_oracle=$_.independent_oracle;task_refs=($_.task_refs -join ';');design_ready=$true;synthetic_input_ready=$syntheticInputReady;dataset_ready=$false;generator_implemented=$syntheticInputReady;generator_scope='shared_synthetic_inputs_only';exact_node_fault_implemented=$false} } | Export-Csv -NoTypeInformation -Encoding UTF8 (Join-Path $out '节点数据契约.csv')
+    $nodeContracts | ForEach-Object { [pscustomobject]@{node_key=$_.node_key;node_name=$_.node_name;training_priority=$_.training_priority;required_gap_ids=($_.required_gap_ids -join ';');real_tables=($_.real_tables -join ';');acceptance_invariant=$_.acceptance_invariant;failure_scenario=$_.failure_scenario;independent_oracle=$_.independent_oracle;task_refs=($_.task_refs -join ';');design_ready=$true;synthetic_input_ready=$syntheticInputReady;dataset_ready=$false;generator_implemented=$syntheticInputReady;generator_scope=$generatorScope;exact_node_fault_implemented=$preciseInputReady} } | Export-Csv -NoTypeInformation -Encoding UTF8 (Join-Path $out '节点数据契约.csv')
     $gapRegistry.gaps | ForEach-Object { [pscustomobject]@{id=$_.id;name=$_.name;priority=$_.priority;status=$_.status;real_status=$_.real_status;synthetic_status=$_.synthetic_status;synthetic_artifacts=($_.synthetic_artifacts -join ';');owner_role=$_.owner_role;fields=($_.fields -join ';');real_solution=$_.real_solution;synthetic_solution=$_.synthetic_solution;acceptance=($_.acceptance -join ';');forbidden_claims=($_.forbidden_claims -join ';');task_refs=($_.task_refs -join ';')} } | Export-Csv -NoTypeInformation -Encoding UTF8 (Join-Path $out '数据缺口登记表.csv')
     $report=New-Object System.Text.StringBuilder
     [void]$report.AppendLine('# 数据缺口登记与解决方案')
@@ -103,13 +112,13 @@ function Export-ExecutionContracts {
 
 当前只交付题目和对应输入，不生产答案。115节点、1150题的设计契约已完成；真实数据库未连接，真实校准为0。
 
-合成输入状态以input-coverage.json和input-binding-validation.json为准。已有输入生成器、共享200标的5日数据和逐节点小案例；每题均有具体文件引用。它们支持synthetic_baseline，不表示115个节点的全部精确故障均已复现。
+合成输入状态以input-coverage.json和input-binding-validation.json为准。逐题专用案例状态另以precise-input-validation.json为证据：575个前五题实验、115节点各5类场景、1150份独立题目输入，逐节点关系校验通过才标记精确故障可用。共享200标的5日作为独立背景，不与小案例混量。
 
 - design_ready：独立题面、数据依赖、不变量、故障、oracle齐全。
 - dataset_ready：保留旧字段，表示真实/完整节点任务级数据门槛，不等于共享synthetic基础包；本版保持false。
 - synthetic_input_ready：对应已验证的合成基础输入包；不等于真实数据。
-- generator_implemented：已有共享合成输入生成器，generator_scope=shared_synthetic_inputs_only；不表示执行算法、生产柜台或每个节点故障引擎已实现。
-- exact_node_fault_implemented：本版保持false；故障族数据与精确节点故障覆盖分开。
+- generator_implemented：生成器范围以generator_scope为准；专用案例通过独立校验时为shared_and_question_specific_synthetic_inputs。不表示生产执行引擎已实现。
+- exact_node_fault_implemented：仅在115节点的正常/故障/恢复/缺证/中性案例及1150题投影均通过独立校验、证据哈希匹配后为true。表示合成输入覆盖，不代表真实市场、官方规则或硬件验收。
 - real_calibration_ready：需独立自有订单/专用数据/硬件/有效规则等外部证据，按节点决定。
 
 具体输入入口为题目与数据输入.jsonl、题目输入索引.csv和scripts/read-question-input.ps1。精确节点故障、真实源接入和外部证据的剩余工作见任务进度.md；不包含教师模型调用、蒸馏或学生评测。

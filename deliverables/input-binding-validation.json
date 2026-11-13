@@ -10,5 +10,5 @@
     "future_daily_gate":  "passed",
     "negative_bindings_rejected":  3,
     "real_dataset_ready":  false,
-    "exact_node_fault_ready":  0
+    "exact_node_fault_ready":  1150
 }

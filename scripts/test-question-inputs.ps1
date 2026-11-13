@@ -10,7 +10,7 @@ Need (@($records.node_key | Select-Object -Unique).Count -eq 115) 'Node input co
 function Test-Binding($r){
     Need ($r.source_class -eq 'synthetic_test_only' -and $r.synthetic_input_ready -eq $true -and $r.real_dataset_ready -eq $false -and $r.real_calibration_ready -eq $false) 'False fidelity claim'
     foreach($field in @('answer','expected_output','solution')){Need ($null -eq $r.PSObject.Properties[$field]) 'Answer field in question input index'}
-    Need ($r.input_files.Count -gt 0 -and $r.case_file -match '^cases/P\d{2}-S\d{2}\.json$') 'Missing input case'
+    Need ($r.input_files.Count -gt 0 -and $r.case_file -eq ('cases/questions/'+$r.question_id+'.json') -and $r.exact_node_fault_implemented -eq $true) 'Missing question-specific input case'
     $casePath=Join-Path $DataDirectory $r.case_file
     Need ((Test-Path -LiteralPath $casePath) -and (Get-FileHash -LiteralPath $casePath -Algorithm SHA256).Hash.ToLowerInvariant() -eq $r.case_sha256) 'Case checksum mismatch'
     foreach($f in $r.input_files){
@@ -46,6 +46,6 @@ Need ($LASTEXITCODE -eq 0) 'Special-case reader failed'
 $special=($specialText -join "`n") | ConvertFrom-Json
 $pcf=@($special.data | Where-Object path -eq 'synthetic/special/pcf.jsonl')
 Need ($pcf.Count -eq 1 -and $pcf[0].rows.Count -gt 0 -and @($pcf[0].rows | Where-Object variant -ne 'missing_evidence').Count -eq 0) 'Scenario variants were mixed'
-$result=[ordered]@{result='passed';questions=1150;nodes=115;input_paths='public_and_resolved';case_hashes='matched';no_answer_fields=$true;inference_parameter_leakage='blocked_by_file_selection';future_feature_gate='passed';future_daily_gate='passed';negative_bindings_rejected=$negative;real_dataset_ready=$false;exact_node_fault_ready=0}
+$result=[ordered]@{result='passed';questions=1150;nodes=115;input_paths='public_and_resolved';case_hashes='matched';no_answer_fields=$true;inference_parameter_leakage='blocked_by_file_selection';future_feature_gate='passed';future_daily_gate='passed';negative_bindings_rejected=$negative;real_dataset_ready=$false;exact_node_fault_ready=1150}
 [System.IO.File]::WriteAllText((Join-Path $root 'deliverables\input-binding-validation.json'),($result | ConvertTo-Json -Depth 8),(New-Object System.Text.UTF8Encoding($false)))
 $result | ConvertTo-Json

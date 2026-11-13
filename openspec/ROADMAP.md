@@ -8,8 +8,8 @@
 
 ## 当前边界
 
-- 已有：25表schema、115节点/1150题、12类缺口登记、共享合成生成器、200标的5日基础数据、订单/账本/辅助/专用资产输入及逐题读取器。
-- 尚无：真实ClickHouse抽取、真实自身订单/账户、真实专用资产或硬件测量；各节点精确故障复现仍需逐项完善。未生产题目答案。
+- 已有：25表schema、115节点/1150题、12类缺口登记、共享合成生成器、200标的5日基础数据、订单/账本/辅助/专用资产输入及逐题读取器；1150份专用题目案例、575个前五题实验和575份节点场景均有独立校验证据。
+- 尚无：真实ClickHouse抽取、真实自身订单/账户、真实专用资产、官方适用规则核验或硬件测量。合成故障覆盖不代替真实验收；未生产题目答案。
 - 本次治理变更完成后归档；未来实现任务保持未勾选，不因为本次规划而自动启动实盘或付费模型调用。
 
 |阶段/优先级|变更单|依赖/负责角色|主要产物|放行条件|
@@ -19,7 +19,7 @@
 |M2，P1|[connect-market-replay-and-calibration](changes/connect-market-replay-and-calibration/tasks.md)|审计可先行；回放依赖M1；数据/合规/执行研究/低延迟研发|真实覆盖、冻结universe、分片重放、D07/D10/D06证据报告|真实来源/语义核验，质量门控，完成率+全目标IS，独立自有样本与硬件按需验证|
 |M3，P2|add-special-asset-fixtures（任务状态见进度）|M1；专用输入研发|D08/D09/D11/D12独立资产和协议测试输入|字段/单位/时段/场景一致，不实现各专用交易引擎或真实校准|
 |M5，当前交付|deliver-question-input-packs|M0/M1/M3|1150题实际输入引用、115小案例、读取器、完整合成数据包|无答案字段；文件/字段/时间/哈希可验，基础支持范围明确|
-|M6，后续P0|[refine-node-specific-inputs](changes/refine-node-specific-inputs/tasks.md)|M5；逐管线输入研发|115节点的专属故障/反事实输入|按节点逐一增加精确复现证据，不把共享故障族上下文当已完成|
+|M6，本次完成后归档|refine-node-specific-inputs（任务状态见进度）|M5；逐管线输入研发|1150份题目专用案例、115节点各5类场景、逐题/节点覆盖表|题干哈希和专用投影匹配；正常/故障关系可区分，恢复只追加证据，中性语义不变，重复生成一致|
 
 延期且不计当前任务：[run-teacher-distillation](changes/run-teacher-distillation/tasks.md)的8项任务保留历史规划，scope_status=deferred。当前题目与基础输入的实现状态及真实源/精确场景剩余任务见自动进度报告，不使用旧的28项总数描述当前完成度。
 
@@ -34,7 +34,7 @@
 
 ## 就绪与完成规则
 
-`design_ready`表示题面契约齐全；`synthetic_input_ready`表示基础合成输入可用；`generator_implemented`的scope限定为shared_synthetic_inputs_only；`exact_node_fault_implemented`表示节点特定故障已精确复现，本版仍false。`dataset_ready`保留为真实/完整节点数据门槛，不能由synthetic自动升档；真实校准仍false。
+`design_ready`表示题面契约齐全；`synthetic_input_ready`表示基础合成输入可用；专用配方和独立校验通过时，`generator_implemented`的scope为shared_and_question_specific_synthetic_inputs，`exact_node_fault_implemented=true`表示声明的合成节点故障已覆盖。证据见precise-input-validation.json、逐题适配覆盖.csv及逐节点场景覆盖.csv。`dataset_ready`保留为真实/完整节点数据门槛，不能由synthetic自动升档；真实校准仍false。
 
 执行后更新tasks和证据路径，再运行进度与验证。全部任务有证据才归档；归档将已实现的delta同步主specs。未来能力在changes/specs中提出，不能提前复制到主specs冒充现状。
 
@@ -42,7 +42,7 @@
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 list
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 status --change refine-node-specific-inputs
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 status --change connect-market-replay-and-calibration
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/openspec.ps1 validate --all --strict
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-progress.ps1
 ```
